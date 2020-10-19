@@ -1,0 +1,144 @@
+html{
+    margin: 0;
+    padding: 0;
+    
+    /*background-image: url("../Images/airport.jpg");*/
+    background-attachment: scroll;
+    color:black;
+}
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    
+    list-style: none;
+    margin: 0; 
+    background: deepskyblue;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+  }
+  
+  .navigation a:hover {
+    background: #1565C0;
+  }
+
+h1{
+    
+    border-style: solid;
+    border-right-style: none
+    border-width: 6px;
+    border-color:   #CECECE;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 500px;
+    padding: 30px 50px 30px ;
+    }
+
+p.titres{
+  margin: 5% 50% 50%;
+  font-size: 300%;
+  text-shadow: 2px 2px 0 white,
+               4px 4px 0 black
+}
+
+img {
+    height: 20%;
+    width: 10%;
+}
+
+
+
+.parallax1 {
+  
+  /* The image used */
+ 
+  background-image: url("../Images/Tokyo.jpg");
+  
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  text-align: center;
+  color: antiquewhite;
+  vertical-align: top;
+}
+
+
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+.parallax2 {
+  /* The image used */
+  background-image: url("../Images/Melbourne.jpg");
+
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+.parallax3 {
+  /* The image used */
+  background-image: url("../Images/Venise.jpg");
+
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+.parallax4 {
+  /* The image used */
+  background-image: url("../Images/Dubai.jpeg");
+
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+a.reservation{
+  background-color: black;
+  text-decoration: double;
+  color: white;
+  margin: 5% 50% 50%;
+}
+#scroll_to_top {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  bottom: 50px;
+  right: 30px;
+}
+#scroll_to_top img {
+  width: 50px;
+  height: 50px;
+}
