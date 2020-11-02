@@ -83,10 +83,9 @@ img {
   color: white;
 }
 .parallax2 {
+  
   /* The image used */
   background-image: url("../Images/Melbourne.jpg");
-
-
   /* Set a specific height */
   min-height: 500px; 
 
