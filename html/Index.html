@@ -19,10 +19,42 @@
             <li ><a href="Index.html"><img  src="../Images/logo.jpg" alt="IMage du Logo" height="100" width="100"></a></li>
             <li ><a href="Index.html">Accueil</a></li>
             <li ><a href="Contact.html">Contact</a></li>
+            <button onclick="document.getElementById('id01').style.display='block'">Connexion</button>
         </ul>
     </div>
 
 <h1>Accueil</h1>
+
+
+
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+ 
+  <form class="modal-content animate" action="/action_page.php">
+
+    <div class="container">
+      <label for="uname"><b>Email ou téléphone</b></label>
+      <input type="text" placeholder="ex: blabla@gmail.com" name="uname" required>
+
+      <label for="psw"><b>Mot de passe</b></label>
+      <input type="password" placeholder="Entrez mot de passe" name="psw" required>
+
+      <button type="submit">Connexion</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Rester connecté
+      </label>
+    </div>
+
+    <div class="container" >
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuler</button>
+      <a href="#"><span class="psw">Mot de passe oublié?</a></span>
+    </div>
+  </form>
+</div>
+
 <div class="parallax1">
 
 <!--
@@ -53,6 +85,8 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem nobis amet exercit
 <p class ="titres">Dubai</p>
     <a href="Reservation.html" class="reservation"><i class="fas fa-plane-departure"></i>  Réservez maintenant! </a>
 </div>
+
+
 
 </body>
 </html>
