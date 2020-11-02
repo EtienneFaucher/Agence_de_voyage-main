@@ -36,5 +36,11 @@ function change() {
     let aff_prix = document.getElementById('prix');
     aff_prix.innerHTML = "Le prix est maintenant de " + price+ "€";
 }
-
-
+function recap() {
+  console.log("recap")
+  const nb_adulte = document.getElementById('adults').value;
+  const nb_enfant = document.getElementById('kids').value;
+  
+  document.getElementById("recap")
+  .innerHTML = "Vous souhaitez réserver un voyage pour ", nb_adulte," adultes, et ",nb_enfant,"enfants";
+}
