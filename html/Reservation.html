@@ -10,17 +10,19 @@
         
     </head>
 
-<body>
+<body onload="reservez()"> 
 
     <div >
         <ul class="navigation"> 
             <li ><a href="Index.html"><img  src="../Images/logo.jpg" alt="IMage du Logo" height="100" width="100"></a></li>
             <li ><a href="Index.html">Accueil</a></li>
             <li ><a href="Contact.html">Contact</a></li>
+            <button onclick="document.getElementById('id01').style.display='block'">Connexion</button>
+
         </ul>
     </div>
 
-<h1>Reservez votre voyage ! </h1>
+<h1 id="dest"> Reservez votre voyage ! </h1>
 <form action="Recapitulatif.html" method="GET" onchange="change()">
     <div>
         <label for="name">Nom:</label>
@@ -83,8 +85,9 @@
     <div> <input type="reset" value="Reset" > </i> <i class="fas fa-redo"></i> </div> 
     <div> <input type="submit" value="Submit"> <i class="fas fa-paper-plane"></i> </div>
 </form>
-</body>
 <footer>
     Site crée par Silia Taider et Etienne Faucher
 </footer>
+</body>
+
 </html>  
