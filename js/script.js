@@ -20,8 +20,11 @@ var venise = new Destination("Venise",50,30,9,"lorem")
 var melbourne = new Destination("Melbourne",50,30,9,"lorem")
 
 function ville_depart() {
-  let depart=prompt("De quelle ville venez vous ? (Paris,Lyon")
-  return depart
+  const depart=prompt("De quelle ville venez vous ?");
+  console.log(depart)
+  let dest=document.getElementById('destination');
+  dest.innerHTML= "Nos destination au départ de " + depart + ' !';
+  console.log(dest)
 }
 
 function calcul(nb_adulte,nb_enfant){
