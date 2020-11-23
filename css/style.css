@@ -1,19 +1,24 @@
 html{
+  font-family: lato;
     margin: 0;
     padding: 0;
     
     /*background-image: url("../Images/airport.jpg");*/
     background-attachment: scroll;
-    color:black;
+}
+
+body{
+  background-color: #7e3a3a;
 }
 .navigation {
+    border-radius: 5%;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    
+    text-align:left ;
     list-style: none;
-    margin: 0; 
-    background: deepskyblue;
+    margin: 0%; 
+    background: #b95353;
   }
   
   .navigation a {
@@ -21,29 +26,50 @@ html{
     display: block;
     padding: 1em;
     color: white;
+    text-align: left;
+  }
+
+  .navigation .boutonCnx{
+    color: white;
+    text-align: right;
+    font-family: lato;
+    background-color:  #130e3b;
+    border-radius: 5%;
+    padding-top: 0%;
+    cursor: pointer;
+  }
+
+  .boutonCnx:hover{
+    background:#4d2a2a;
   }
   
   .navigation a:hover {
-    background: #1565C0;
+    background: #4d2a2a;
   }
 
-h1{
-    
+h1{ 
+    font-weight: 500;
+    background:#b95353;
+    /* rgba(126, 58, 56, 0.5);*/
+    text-align: center;
+    color: white;
     border-style: solid;
-    border-right-style: none;
-    border-width: 6px;
-    border-color:   #CECECE;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 500px;
+    border-width: 1px;
+    border-color:   #b95353;
+    border-radius: 5%;
+    margin: 5% 15%;
     padding: 30px 50px 30px ;
     }
 
 p.titres{
-  margin: 5% 50% 50%;
-  font-size: 300%;
-  text-shadow: 2px 2px 0 white,
-               4px 4px 0 black
+  /*border: #4d2a2a solid 2px;*/
+  background-color:#7e3a3a;
+  border-radius: 5%;
+  padding-bottom: 2%;
+  margin: 5% 25%;
+  color: white
+  text-align: center;
+  font-size: 400%;
 }
 
 img {
@@ -51,18 +77,14 @@ img {
     width: 10%;
 }
 
-
-
 .parallax1 {
   
   /* The image used */
  
   background-image: url("../Images/Tokyo.jpg");
-  
-
   /* Set a specific height */
-  min-height: 500px; 
-
+  min-height: 600px; 
+  border-radius: 5%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -71,65 +93,72 @@ img {
   text-align: center;
   color: antiquewhite;
   vertical-align: top;
+  margin: 3%;
 }
 
 
-.button {
-  transition-duration: 0.4s;
-}
-
-.button:hover {
-  background-color: #4CAF50; /* Green */
-  color: white;
-}
 .parallax2 {
   
   /* The image used */
   background-image: url("../Images/Melbourne.jpg");
   /* Set a specific height */
-  min-height: 500px; 
-
+  min-height: 600px; 
+  text-align: center;
+  color: antiquewhite;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
+  margin: 3%;
+  border-radius: 5%;
 }
+
 .parallax3 {
   /* The image used */
   background-image: url("../Images/Venise.jpg");
-
-
+  border-radius: 5%;
+  text-align: center;
+  color: antiquewhite;
   /* Set a specific height */
-  min-height: 500px; 
+  min-height: 600px; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
+  margin: 3%;
 }
 .parallax4 {
   /* The image used */
   background-image: url("../Images/Dubai.jpeg");
-
-
+  border-radius: 5%;
+  text-align: center;
+  color: antiquewhite;
   /* Set a specific height */
-  min-height: 500px; 
+  min-height: 600px; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
+  margin: 3%;
 }
 
 a.reservation{
-  background-color: black;
-  text-decoration: double;
+  background-color: #7e3a3a;
+  text-decoration: none;
+  padding: 1% 5%;
   color: white;
-  margin: 5% 50% 50%;
+  border-radius: 5%;
 }
+
+a.reservation:hover{
+  color: #4d2a2a;
+}
+
 #scroll_to_top {
   position: fixed;
   width: 25px;
@@ -151,17 +180,27 @@ a.reservation{
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: scrolls; /* Enable scroll if needed */
-  background-color:deepskyblue; /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
-  padding-top: 30%;
+  /*background-color:#4d2a2a; /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  padding-top: 0%;
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: deepskyblue;
+  font-family: lato;
+  font-weight: 200;
+  background-color:rgba(126, 58, 58, 0.7);
+
   margin: 15% auto; /* 15% from the top and centered */
-  border: 5% solid rgb(45, 25, 228);
-  width: 80%; /* Could be more or less, depending on screen size */
+  border: 50% solid rgb(45, 25, 228);
+  width: 50%; /* Could be more or less, depending on screen size */
+  border-radius: 5%;
+}
+
+.container1{
+  padding: 10%;
+  text-align: center;
+  font-weight: 500;
 }
 
 /* The Close Button */
@@ -170,15 +209,14 @@ a.reservation{
   position: absolute;
   right: 25px;
   top: 0;
-  color: #000;
+  color: white;
   font-size: 35px;
   font-weight: bold;
 }
 
 /* Close button on hover */
-.close:hover,
-.close:focus {
-  color: red;
+.close:hover{
+  color: #b95353;
   cursor: pointer;
 }
 
@@ -197,13 +235,24 @@ a.reservation{
   from {transform: scale(0)}
   to {transform: scale(1)}
 }
+
+.container2{
+  text-align: center;
+}
+
+.boutonForm{
+  padding: 1% 5%;
+}
+
 footer{
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  text-align: right;
   list-style: none;
-  margin: 0; 
-  background: deepskyblue;
-
+  margin-left: 40%;
+  margin-right: 40% ; 
+  padding: 1% 5%;
+  background:#b95353;
+  text-align: center;
+  border-radius: 5%;
 }

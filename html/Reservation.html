@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
     <head>
         <title>Réservation</title> 
@@ -18,45 +18,44 @@
             <li ><a href="Index.html">Accueil</a></li>
             <li ><a href="Contact.html">Contact</a></li>
             <button onclick="document.getElementById('id01').style.display='block'">Connexion</button>
-
         </ul>
     </div>
 
 <h1 id="dest"> Reservez votre voyage ! </h1>
-<form action="Recapitulatif.html" method="GET" onchange="change()">
-    <div>
+<form class="form" action="Recapitulatif.html" method="GET" onchange="change()">
+    <div class="formGr">
         <label for="name">Nom:</label>
         <input type="text" placeholder="Ex: Etienne" required id="name" name="user_name">
     </div>
-    <div>
+    <div class="formeGr">
         <label for="surname">Prénom:</label>
         <input type="text" placeholder="Ex: Silia" required id="surname" name="user_surname">
     </div>
-    <div>
+    <div class="formeGr">
         <label for="mail">e-mail:</label>
         <input type="email" placeholder="Ex: etienne@silia.fr" required id="mail" name="user_mail">
     </div>
-    <div>
+    <div class="formeGr">
         <label for="phone">Téléphone:</label>
         <input type="number" placeholder="Ex: 012345678" id="phone" name="user_number">
     </div>
-    <div>
+    <div class="formeGr">
         <label for="departure">Départ:</label>
         <input type="date" required id="departure" name="user_departure">
     </div>
-    <div>
+    <div class="formeGr">
         <label for="return">Retour:</label>
         <input type="date" required id="return" name="user_return">
     </div>
-    <div>
+    <div class="formeGr">
         <label for="adults">Nombre d'adultes:</label>
         <input type="number" placeholder="Ex: 3" required id="adults" name="user_adults" min=1>
     </div>
-    <div>
+    <div class="formeGr">
         <label for="kids">Nombre d'enfants (-12 ans):</label>
         <input type="number" placeholder="Ex: 2" required id="kids" name="user_kids" min=0>
     </div>
-    <div>
+    <div class="formeGr">
         <label for="breakfast" >Souhaitez-vous le petit déjeuner?</label>
         <input type="radio" id="breakfast" name="user_breakfast"> 
         <label for="breakfast">Oui</label>
@@ -64,26 +63,24 @@
         <input type="radio" name="user_breakfast">
         <label for="breakfast" >Non</label>
     </div>
-    <div>
-        <label for="food">Avez-vous un régime particulier?</label>
-         <input type="radio" id="food" name="user_food">
-         <label for="food">Végétarien</label>
-       
-        <input type="radio" name="user_food">
-        <label for="food">Halal</label>
-        <input type="radio" name="user_food">
-        <label for="food">Allergies (précisez)</label>
+    <div class="formeGr">
+
+        <label>Avez-vous un régime particulier?</label>
+        <select name="regime">
+            <option value="vegetarien">Végétarien</option>
+            <option value="Halal">Halal</option>
+            <option value="allergies">Allergies</option>
+        </select>
         
-        <input type="text" placeholder="Ex: Gluten" name="user_food">
     </div>
-    <div>
+    <div class="formeGr">
         <label for="message"> Rensiegnements additionnels</i> :</label>
         <textarea id="message" name="user_message"></textarea>
     </div>
     <div>        <label id="prix"> Le prix total est de: </i> :</label>
     </div>
-    <div> <input type="reset" value="Reset" > </i> <i class="fas fa-redo"></i> </div> 
-    <div> <input type="submit" value="Submit"> <i class="fas fa-paper-plane"></i> </div>
+    <div class="bouton"> <input type="reset" value="Reset" > </i> <i class="fas fa-redo"></i> </div> 
+    <div class="bouton"> <input type="submit" value="Submit"> <i class="fas fa-paper-plane"></i> </div>
 </form>
 <footer>
     Site crée par Silia Taider et Etienne Faucher
