@@ -262,3 +262,54 @@ footer{
   height: 100%;
   position:static;
 }
+
+.form{
+  opacity: 85%;
+  border: #b95353 solid 3px;
+  border-radius: 15%;
+  color: white;
+  background-color: #130e3b;
+  padding: 0% 10%;
+  margin: 5% 30%;
+}
+
+.form p{
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.formeGr{
+  padding-bottom: 3%;
+  text-align: center;
+}
+
+.form label{
+  opacity: 50%;
+  display: block; 
+}
+
+.form input{
+  opacity: 80%;
+      border-radius: 20%;
+      border-color: #b95353;
+}
+
+.form textarea{
+  opacity: 80%;
+      border-radius: 20%;
+      border-color: #b95353;
+}
+
+.form select{
+  opacity: 80%;
+      border-radius: 20%;
+      border-color: #b95353;
+}
+
+.bouton{
+  width: 35%;
+  color: white;
+  display: inline;
+  margin: 10%;
+}
+
