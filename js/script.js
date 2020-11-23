@@ -32,7 +32,15 @@ function calcul(nb_adulte,nb_enfant){
   prix= nb_adulte*a[0]+nb_enfant*a[1];
   return prix
 }
-
+function hello(){
+  const username = document.getElementById('coname')
+  const password = document.getElementById('copass')
+  if (username=="etienne" && password=="coucou" || username=="silia" && password=="" || username=="prof" && password=="CeSiteEstMagnifiqueLesEtudiantsMeritentUneTresBonneNote"){
+    const connexion = document.getElementById("bonjour")
+    connexion.innerHTML = "Bonjour "+ username + " !"
+    console.log("oui")}
+  else {console.log("non")}
+}
 function change() {
   console.log("coucou")
   const nb_adulte = document.getElementById('adults').value;

@@ -13,7 +13,7 @@
 </div>
 </head>
 
-<body onload="ville_depart()">
+<body """onload="ville_depart()""">
 
     <div >
         <ul class="navigation"> 
@@ -22,6 +22,7 @@
             <li ><a href="Contact.html">Contact</a></li>
             <li ><a target="_blank" href="map.html">Map</a></li>
             <button class="boutonCnx" onclick="document.getElementById('id01').style.display='block'">Connexion</button>
+            <li id="bonjour"></li>
         </ul>
     </div>
 
@@ -35,27 +36,27 @@
 class="close" title="Close Modal">&times;</span>
 
  
-  <form class="modal-content animate" action="/action_page.php">
+  <form class="modal-content animate" >
 
     <div class="container1">
       <p>Connectez-vous!</p>
       <div>
         <label for="uname">Email ou téléphone</label>
         <br>
-      <input type="text" placeholder="ex: blabla@gmail.com" name="uname" required>
+      <input id="coname" type="text" placeholder="ex: blabla@gmail.com" name="uname" required>
       </div>
 
       <div>
       <label for="psw">Mot de passe</label>
       <br>
-      <input type="password" placeholder="Entrez mot de passe" name="psw" required>
+      <input id="copass" type="password" placeholder="Entrez mot de passe" name="psw" required>
       </div>
     </div>
 
  
     <div class="container2" >   
       <div>
-      <button class="boutonForm" type="submit">Connexion</button>
+      <button class="boutonForm" type="submit" onclick="hello()">Connexion</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Rester connecté
       </label>
