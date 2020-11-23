@@ -19,6 +19,11 @@ var dubai = new Destination("Dubai",50,30,9,"lorem")
 var venise = new Destination("Venise",50,30,9,"lorem")
 var melbourne = new Destination("Melbourne",50,30,9,"lorem")
 
+function ville_depart() {
+  let depart=prompt("De quelle ville venez vous ? (Paris,Lyon")
+  return depart
+}
+
 function calcul(nb_adulte,nb_enfant){
   a=tokyo.retour;
   prix= nb_adulte*a[0]+nb_enfant*a[1];
