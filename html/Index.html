@@ -7,13 +7,15 @@
 <link rel="shortcut icon" type="image/png" href="../Images/favicon.ico"/>
 <link rel="stylesheet" href="../css/style.css"/>
 <script src="https://kit.fontawesome.com/248965cc4b.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script src="../js/script.js"></script>
 <div id="scroll_to_top">
     <a href="#top"><img src="../Images/fleche.png"  alt="Retourner en haut" /></a>
 </div>
 </head>
 
-<body """onload="ville_depart()""">
+<body onload="buttonClickGET()">
 
     <div >
         <ul class="navigation"> 
@@ -71,17 +73,21 @@ class="close" title="Close Modal">&times;</span>
 <div class="parallax1">
 
 
-<p class ="titres">Tokyo</p>
+<p id="titre" value="Tokyo" class ="titres">Tokyo</p>
+
 <p class="description">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quo. </p>
 <!--<i class="fas fa-plane-departure"></i>-->
     <a href="Reservation.html?destination=Tokyo" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
+    <p id="zone_meteo">Zone meteo</p>
+
 </div>
 
 <div class="parallax2">
 
 <p class ="titres">Melbourne</p>
     <a href="Reservation.html?destination=Melbourne" class="reservation"><i class="fas fa-plane-departure"></i>  Réservez maintenant!</a>
+    <p id="zone_meteo">Zone meteo. N'est associée à aucune fonction js donc ne marche pas pour l'instant.</p>
 </div>
 
 <div class="parallax3">
