@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <title>Réservation</title> 
-        <link rel="shortcut icon" type="image/png" href="../Images/favicon.ico"/>
-        <link rel="stylesheet" href="../css/style.css"/>
-        <script src="https://kit.fontawesome.com/248965cc4b.js" crossorigin="anonymous"></script>
-        <script src="../js/script.js"></script>
 
-        
-    </head>
+<head onload="ville()">
+<title>Agence de Voyage</title>
 
-<body onload="reservez()"> 
+<link rel="shortcut icon" type="image/png" href="../Images/favicon.ico"/>
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="https://kit.fontawesome.com/248965cc4b.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<div id="scroll_to_top">
+    <a href="#top"><img src="../Images/fleche.png"  alt="Retourner en haut" /></a>
+</div>
+</head>
+
+<body onload="buttonClickGET()">
 
     <div >
         <ul class="navigation"> 
             <li ><a href="Index.html"><img  src="../Images/logo.jpg" alt="IMage du Logo" height="100" width="100"></a></li>
             <li ><a href="Index.html">Accueil</a></li>
             <li ><a href="Contact.html">Contact</a></li>
-            <button class="boutonCnx" onclick="document.getElementById('id01').style.display='block'">Connexion</button>
+            <li ><a target="_blank" href="map.html">Map</a></li>
+            <li><button class="boutonCnx" onclick="document.getElementById('id01').style.display='block'">Connexion</button></li>  
+            <li id="bonjour"></li>
         </ul>
     </div>
 
@@ -83,9 +90,12 @@
     <div class="bouton"> <input type="reset" value="Reset" > </i> <i class="fas fa-redo"></i> </div> 
     <div class="bouton"> <input type="submit" value="Submit"> <i class="fas fa-paper-plane"></i> </div>
 </form>
-<footer>
-    Site crée par Silia Taider et Etienne Faucher
-</footer>
 </body>
+
+<footer>
+        Site crée par Silia Taider et Etienne Faucher
+</footer>
+
+<script src="../js/script.js"></script>
 
 </html>  

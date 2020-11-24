@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Récapitulatif</title>
-        <link rel="shortcut icon" type="image/png" href="../Images/favicon.ico"/>
-        <link rel="stylesheet" href="../css/style.css"/>
-        <script src="../js/script.js"></script>
+<html lang="fr">
 
-    </head>
+<head onload="ville()">
+<title>Agence de Voyage</title>
+
+<link rel="shortcut icon" type="image/png" href="../Images/favicon.ico"/>
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="https://kit.fontawesome.com/248965cc4b.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<div id="scroll_to_top">
+    <a href="#top"><img src="../Images/fleche.png"  alt="Retourner en haut" /></a>
+</div>
+</head>
+
+<body onload="buttonClickGET()">
+
+    <div >
+        <ul class="navigation"> 
+            <li ><a href="Index.html"><img  src="../Images/logo.jpg" alt="IMage du Logo" height="100" width="100"></a></li>
+            <li ><a href="Index.html">Accueil</a></li>
+            <li ><a href="Contact.html">Contact</a></li>
+            <li ><a target="_blank" href="map.html">Map</a></li>
+            <li><button class="boutonCnx" onclick="document.getElementById('id01').style.display='block'">Connexion</button></li>  
+            <li id="bonjour"></li>
+        </ul>
+    </div>
 
 <body onload="recap()">
 
@@ -22,10 +42,12 @@
 <h1>Récapitulatif de votre commande</h1>
 <p id="recap"> Mettre ici la fin de la commande apres avoir validé le formulaire</p>
 
+</body>
+
 <footer>
-    Site crée par Silia Taider et Etienne Faucher
+        Site crée par Silia Taider et Etienne Faucher
 </footer>
 
-</body>
+<script src="../js/script.js"></script>
 
 </html> 
