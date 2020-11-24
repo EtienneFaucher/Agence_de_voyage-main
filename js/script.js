@@ -82,3 +82,28 @@ console.log("ville")
 let presville = document.getElementById("ville")
 presville.innerHTML = VILLE
 }
+
+
+
+let destinations = [
+  { ville: "Tokyo", image: "../Images/Tokyo.jpg", description: "Description de Tokyo" },
+  { ville: "Melbourne", image: "../Images/Melbourne.jpg", description: "Description de Melbourne" },
+  { ville: "Venise", image: "../Images/Venise.jpg", description: "Description de Venise" },
+  { ville: "Dubai", image: "../Images/Dubai.jpeg", description: "Description de Dubai" },
+];
+
+let template = document.querySelector("#listeDestinations");
+
+for (const d of destinations) {					// itère sur le tableau
+    let clone = document.importNode(template.content, true);      // clone le template
+
+    newContent = clone.firstElementChild.innerHTML		// remplace {{modèle}}
+        .replace(/{{ville}}/g, d.ville)				// et {{couleur}} par
+        .replace(/{{image}}/g, d.image)
+        .replace(/{{description}}/g, d.description)				// leur valeur
+
+    clone.firstElementChild.innerHTML = newContent		
+
+    document.body.appendChild(clone);				// On ajoute le clone créé
+}
+

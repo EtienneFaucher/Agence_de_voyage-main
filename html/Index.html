@@ -9,7 +9,7 @@
 <script src="https://kit.fontawesome.com/248965cc4b.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<script src="../js/script.js"></script>
+
 <div id="scroll_to_top">
     <a href="#top"><img src="../Images/fleche.png"  alt="Retourner en haut" /></a>
 </div>
@@ -70,14 +70,38 @@ class="close" title="Close Modal">&times;</span>
   </form>
 </div>
 
-<div class="parallax1">
 
+  <template id="listeDestinations">
+
+    <div class="parallax">
+
+    <span class="titres">{{ville}}</br></span>
+
+    <div class="descriptionContainer">
+    <span class="titreDescription"> Pourquoi {{ville}}?</span>
+    <br>
+    <br>
+    <span class="description"> {{description}}</span>
+    </div>
+
+    <a href="Reservation.html?destination={{ville}}" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
+    <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
+
+    </div>
+
+
+  </template>
+
+
+<!------------PARALLAXE SANS TEMPLATE
+
+ <div class="parallax1"> 
 
 <p id="titre" value="Tokyo" class ="titres">Tokyo</p>
 
 <p class="description">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quo. </p>
-<!--<i class="fas fa-plane-departure"></i>-->
+
     <a href="Reservation.html?destination=Tokyo" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
     <p id="zone_meteo">Zone meteo</p>
 
@@ -100,11 +124,14 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quo. </p>
 <p class ="titres">Dubai</p>
     <a href="Reservation.html?destination=Dubai" class="reservation"><i class="fas fa-plane-departure"></i>  Réservez maintenant! </a>
 </div>
+-->
+
+
+</body>
+
+<script src="../js/script.js"></script>
 
 <footer>
     Site créé par Silia Taider et Etienne Faucher
 </footer>
-
-</body>
-
 </html>

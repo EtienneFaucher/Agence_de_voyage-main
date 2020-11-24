@@ -56,16 +56,17 @@ h1{
     border-style: solid;
     border-width: 1px;
     border-color:   #b95353;
-    border-radius: 5%;
-    margin: 5% 15%;
+    border-radius: 10%;
+    margin: 3% 15%;
     padding: 30px 50px 30px ;
     }
 
-p.titres{
+span.titres{
   /*border: #4d2a2a solid 2px;*/
+  font-weight: 475;
   background-color:#7e3a3a;
-  border-radius: 5%;
-  padding-bottom: 2%;
+  border-radius: 15%;
+  padding: 1% 10% 1% 10%;
   margin: 5% 25%;
   color: white;
   text-align: center;
@@ -77,15 +78,13 @@ img {
     width: 10%;
 }
 
-.parallax1 {
+.parallax {
   
   /* The image used */
  
   background-image: url("../Images/Tokyo.jpg");
-  /* Set a specific height */
   min-height: 600px; 
   border-radius: 5%;
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
@@ -97,15 +96,15 @@ img {
 }
 
 
-.parallax2 {
+/* .parallax2 {
   
-  /* The image used */
+ 
   background-image: url("../Images/Melbourne.jpg");
-  /* Set a specific height */
+  
   min-height: 600px; 
   text-align: center;
   color: antiquewhite;
-  /* Create the parallax scrolling effect */
+  
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
@@ -115,15 +114,13 @@ img {
 }
 
 .parallax3 {
-  /* The image used */
+  
   background-image: url("../Images/Venise.jpg");
   border-radius: 5%;
   text-align: center;
   color: antiquewhite;
-  /* Set a specific height */
+  
   min-height: 600px; 
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
@@ -131,21 +128,19 @@ img {
   margin: 3%;
 }
 .parallax4 {
-  /* The image used */
+  
   background-image: url("../Images/Dubai.jpeg");
   border-radius: 5%;
   text-align: center;
   color: antiquewhite;
-  /* Set a specific height */
+  
   min-height: 600px; 
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
   margin: 3%;
-}
+}*/
 
 a.reservation{
   background-color: #7e3a3a;
@@ -157,6 +152,32 @@ a.reservation{
 
 a.reservation:hover{
   color: #4d2a2a;
+}
+
+.descriptionContainer{
+  text-align: center;
+  color: white;
+  background-color: black/* #b95353 */;
+  opacity: 0.25;
+  padding: 2% 2%;
+  margin: 10% 25%;
+  margin-bottom: 5%;
+  border-radius: 15%;
+}
+
+.titreDescription{
+  font-weight: 500;
+}
+
+.zone_meteo{
+  text-align: center;
+  color: white;
+  background-color: black/* #b95353 */;
+  opacity: 0.3;
+  padding: 1% 2%;
+  margin: 3% 42%;
+  margin-bottom: 5%;
+  border-radius: 15%;
 }
 
 #scroll_to_top {
@@ -312,4 +333,5 @@ footer{
   display: inline;
   margin: 10%;
 }
+
 
