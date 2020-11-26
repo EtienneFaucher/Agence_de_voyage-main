@@ -70,7 +70,7 @@ function reservez() {
 
 u = new window.URLSearchParams(window.location.search)
 
-const ville = u.get("destination");
+const ville = u.get("destiantion");
 
 
 let txtrecap = document.getElementById("dest")
@@ -86,13 +86,15 @@ presville.innerHTML = VILLE
 
 
 let destinations = [
-  { ville: "Tokyo", image: "../Images/Tokyo.jpg", description: "Description de Tokyo" },
-  { ville: "Melbourne", image: "../Images/Melbourne.jpg", description: "Description de Melbourne" },
-  { ville: "Venise", image: "../Images/Venise.jpg", description: "Description de Venise" },
-  { ville: "Dubai", image: "../Images/Dubai.jpeg", description: "Description de Dubai" },
+  { ville: "Tokyo", image: "../Images/Tokyo.jpg", description: "Description de Tokyo", continent: "asie" },
+  { ville: "Melbourne", image: "../Images/Melbourne.jpg", description: "Description de Melbourne", continent: "australie" },
+  { ville: "Venise", image: "../Images/Venise.jpg", description: "Description de Venise", continent: "europe" },
+  { ville: "Dubai", image: "../Images/Dubai.jpeg", description: "Description de Dubai", continent:"asie" },
+  { ville: "Hawaii", image: "../Images/Hawaii.jpeg", description: "Description de Hawaii", continent: "amerique" },
+  { ville: "Florence", image: "../Images/Florence.jpeg", description: "Description de Florence", continent: "europe" }
 ];
 
-let template = document.querySelector("#listeDestinations");
+ let template = document.querySelector("#listeDestinations");
 
 for (const d of destinations) {					// itère sur le tableau
     let clone = document.importNode(template.content, true);      // clone le template
@@ -101,9 +103,13 @@ for (const d of destinations) {					// itère sur le tableau
         .replace(/{{ville}}/g, d.ville)				// et {{couleur}} par
         .replace(/{{image}}/g, d.image)
         .replace(/{{description}}/g, d.description)				// leur valeur
+        .replace(/{{continent}}/g, d.continent)
 
     clone.firstElementChild.innerHTML = newContent		
 
     document.body.appendChild(clone);				// On ajoute le clone créé
 }
+
+
+
 
