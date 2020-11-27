@@ -1,3 +1,5 @@
+
+
 class Destination {
   constructor(nom, prix_adulte, prix_enfant, prix_dej,description) {
     this.nom = nom;
@@ -105,11 +107,14 @@ for (const d of destinations) {					// itère sur le tableau
         .replace(/{{description}}/g, d.description)				// leur valeur
         .replace(/{{continent}}/g, d.continent)
 
-    clone.firstElementChild.innerHTML = newContent		
-
+        
+    
+        clone.firstElementChild.innerHTML = newContent		
+        
     document.body.appendChild(clone);				// On ajoute le clone créé
 }
 
-
+        document.getElementById("par").style.color = "blue";
+        document.getElementById("par").style.backgroundImage = "url('../Images/Dubai.jpeg')";
 
 
