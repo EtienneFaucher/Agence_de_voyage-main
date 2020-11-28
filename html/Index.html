@@ -70,18 +70,25 @@ class="close" title="Close Modal">&times;</span>
   </form>
 </div>
 
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Afficher tout</button>
-  <button class="btn" onclick="filterSelection('asie')"> Asie</button>
-  <button class="btn" onclick="filterSelection('europe')"> Europe</button>
-  <button class="btn" onclick="filterSelection('afrique')"> Afrique</button>
-  <button class="btn" onclick="filterSelection('amerique')"> Amerique</button>
-  <button class="btn" onclick="filterSelection('australie')"> Australie</button>
-</div>
+  
+  <h2>Quels continent préférez-vous?:</h2>
+  
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Afficher tout</button>
+    <button class="btn" onclick="filterSelection('cars')"> Asie</button>
+    <button class="btn" onclick="filterSelection('animals')"> Europe</button>
+    <button class="btn" onclick="filterSelection('fruits')"> Australie</button>
+    <button class="btn" onclick="filterSelection('colors')"> Amérique</button>
+    <button class="btn" onclick="filterSelection('none')"> Afrique</button>
+  </div>
+  
+  
 
-  <template id="listeDestinations">
+ <!--- <template id="listeDestinations">
 
-    <div id ="par" class="parallax">
+    <div id="par" class="parallax">
+
+      
 
     <span class="titres">{{ville}}</br></span>
     <span>Continent: {{continent}}</span>
@@ -96,57 +103,131 @@ class="close" title="Close Modal">&times;</span>
     <a href="Reservation.html?destination={{ville}}" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
     <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
 
-
+      
     </div>
 
 
-  </template>
+  </template> -->
 
 
-<!------------PARALLAXE SANS TEMPLATE
+<!------------PARALLAXE SANS TEMPLATE -->
 
-<div class="filterDiv asie">
 
- <div class="parallax"> 
+<div class="filterDiv cars">
+ <div class="parallax1"> 
 
-<p id="titre" value="Tokyo" class ="titres">Tokyo</p>
+  <span class="titres">Tokyo</br></span>
+  <span>Continent: Asie</span>
 
-<p class="description">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quo. </p>
+  <div class="descriptionContainer">
+  <span class="titreDescription"> Pourquoi Tokyo?</span>
+  <br>
+  <br>
+  <span class="description"> Lorem ipsum dolor sit amet.</span>
+  </div>
 
-    <a href="Reservation.html?destination=Tokyo" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
-    <p id="zone_meteo">Zone meteo</p>
+  <a href="Reservation.html?destination=Tokyo" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
+  <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
 
 </div>
-
 </div>
 
-<div class="filterDiv australie">
+
+<div class="filterDiv fruits">
 <div class="parallax2">
 
-<p class ="titres">Melbourne</p>
-    <a href="Reservation.html?destination=Melbourne" class="reservation"><i class="fas fa-plane-departure"></i>  Réservez maintenant!</a>
-    <p id="zone_meteo">Zone meteo. N'est associée à aucune fonction js donc ne marche pas pour l'instant.</p>
-</div>
+  <span class="titres">Melbourne</br></span>
+  <span>Continent: Australie</span>
+
+  <div class="descriptionContainer">
+  <span class="titreDescription"> Pourquoi Melbourne?</span>
+  <br>
+  <br>
+  <span class="description"> Lorem ipsum dolor sit amet.</span>
+  </div>
+
+  <a href="Reservation.html?destination=Melbourne" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
+  <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
 
 </div>
+</div>
 
-<div class="filterDiv europe">
+<div class="filterDiv animals">
 <div class="parallax3">
 
-<p class ="titres">Venise</p>
-    <a href="Reservation.html?destination=Venise" class="reservation"><i class="fas fa-plane-departure"></i>  Réservez maintenant!</a>
+  <span class="titres">venise</br></span>
+  <span>Continent: Europe</span>
+
+  <div class="descriptionContainer">
+  <span class="titreDescription"> Pourquoi Venise?</span>
+  <br>
+  <br>
+  <span class="description"> Lorem ipsum dolor sit amet.</span>
+  </div>
+
+  <a href="Reservation.html?destination=Venise" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
+  <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
+
 </div>
 </div>
 
-<div class="filterDiv asie">
+<div class="filterDiv cars">
 <div class="parallax4">
 
-<p class ="titres">Dubai</p>
-    <a href="Reservation.html?destination=Dubai" class="reservation"><i class="fas fa-plane-departure"></i>  Réservez maintenant! </a>
+  <span class="titres">Dubai</br></span>
+  <span>Continent: Asie</span>
+
+  <div class="descriptionContainer">
+  <span class="titreDescription"> Pourquoi Dubai?</span>
+  <br>
+  <br>
+  <span class="description"> Lorem ipsum dolor sit amet.</span>
+  </div>
+
+  <a href="Reservation.html?destination=Dubai" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
+  <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
+
 </div>
 </div>
--->
+
+<div class="filterDiv colors">
+<div class="parallax5">
+
+  <span class="titres">Hawaii</br></span>
+  <span>Continent: Amérique</span>
+
+  <div class="descriptionContainer">
+  <span class="titreDescription"> Pourquoi Hawaii?</span>
+  <br>
+  <br>
+  <span class="description"> Lorem ipsum dolor sit amet.</span>
+  </div>
+
+  <a href="Reservation.html?destination=Hawaii" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
+  <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
+
+</div>
+</div>
+
+<div class="filterDiv animals">
+<div class="parallax6">
+
+  <span class="titres">Florence</br></span>
+  <span>Continent: Europe</span>
+
+  <div class="descriptionContainer">
+  <span class="titreDescription"> Pourquoi Florence?</span>
+  <br>
+  <br>
+  <span class="description"> Lorem ipsum dolor sit amet.</span>
+  </div>
+
+  <a href="Reservation.html?destination=Florence" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
+  <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
+
+</div>
+</div>
+
 
 </body>
 
