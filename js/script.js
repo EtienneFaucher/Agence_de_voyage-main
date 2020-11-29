@@ -29,8 +29,46 @@ filterSelection("all")
     }
     element.className = arr1.join(" ");
   }
+
   
-  // Add active class to the current button (highlight it)
+/*let destinations = [
+  { ville: "Tokyo", image: "../Images/Tokyo.jpg", description: "Description de Tokyo", continent: "asie" },
+  { ville: "Melbourne", image: "../Images/Melbourne.jpg", description: "Description de Melbourne", continent: "australie" },
+  { ville: "Venise", image: "../Images/Venise.jpg", description: "Description de Venise", continent: "europe" },
+  { ville: "Dubai", image: "../Images/Dubai.jpeg", description: "Description de Dubai", continent:"asie" },
+  { ville: "Hawaii", image: "../Images/Hawaii.jpeg", description: "Description de Hawaii", continent: "amerique" },
+  { ville: "Florence", image: "../Images/Florence.jpeg", description: "Description de Florence", continent: "europe" }
+];
+
+ let template = document.querySelector("#listeDestinations");
+
+for (const d of destinations) {					
+    let clone = document.importNode(template.content, true);     
+
+    newContent = clone.firstElementChild.innerHTML	
+        .replace(/{{ville}}/g, d.ville)				
+        .replace(/{{image}}/g, d.image)
+        .replace(/{{description}}/g, d.description)				
+        .replace(/{{continent}}/g, d.continent)
+
+        
+    
+        clone.firstElementChild.innerHTML = newContent		
+        
+    document.body.appendChild(clone);				
+}
+
+document.getElementsByClassName("continent")[0].setAttribute("class", {{continent}}); ---- ça ne donne pas à chaque destination sa classe
+
+
+        /*document.getElementById("par").style.color = "blue";
+        document.getElementById("par").style.backgroundImage = "url('../Images/Dubai.jpeg')"; ----- ça ne change que le style de la première template */
+
+
+
+
+  
+  
   var btnContainer = document.getElementById("myBtnContainer");
   var btns = btnContainer.getElementsByClassName("btn");
   for (var i = 0; i < btns.length; i++) {
@@ -125,40 +163,5 @@ console.log("ville")
 let presville = document.getElementById("ville")
 presville.innerHTML = VILLE
 }
-
-
-
-/*let destinations = [
-  { ville: "Tokyo", image: "../Images/Tokyo.jpg", description: "Description de Tokyo", continent: "asie" },
-  { ville: "Melbourne", image: "../Images/Melbourne.jpg", description: "Description de Melbourne", continent: "australie" },
-  { ville: "Venise", image: "../Images/Venise.jpg", description: "Description de Venise", continent: "europe" },
-  { ville: "Dubai", image: "../Images/Dubai.jpeg", description: "Description de Dubai", continent:"asie" },
-  { ville: "Hawaii", image: "../Images/Hawaii.jpeg", description: "Description de Hawaii", continent: "amerique" },
-  { ville: "Florence", image: "../Images/Florence.jpeg", description: "Description de Florence", continent: "europe" }
-];
-
- let template = document.querySelector("#listeDestinations");
-
-for (const d of destinations) {					
-    let clone = document.importNode(template.content, true);     
-
-    newContent = clone.firstElementChild.innerHTML	
-        .replace(/{{ville}}/g, d.ville)				
-        .replace(/{{image}}/g, d.image)
-        .replace(/{{description}}/g, d.description)				
-        .replace(/{{continent}}/g, d.continent)
-
-        
-    
-        clone.firstElementChild.innerHTML = newContent		
-        
-    document.body.appendChild(clone);				
-}*/
-
-/*document.getElementsByClassName("continent")[0].setAttribute("class", {{continent}});*/
-
-
-        /*document.getElementById("par").style.color = "blue";
-        document.getElementById("par").style.backgroundImage = "url('../Images/Dubai.jpeg')";*/
 
 
