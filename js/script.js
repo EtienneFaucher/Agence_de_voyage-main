@@ -107,6 +107,26 @@ function ville_depart() {
   dest.innerHTML= "Nos destination au départ de " + depart + ' !';
   console.log(dest)
 }
+var callBackGetSuccess = function(data) {
+  var element = document.getElementById("zone_meteo");
+  element.innerHTML = "La temperature est de " + data.main.temp + "°C";
+  console.log(element)
+}
+
+
+function buttonClickGET() {
+  var ville = document.getElementById("titre").innerHTML;
+ 
+  console.log(ville)
+
+  var url = "https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric"
+
+  $.get(url, callBackGetSuccess).done(function() {
+    })
+    .always(function() {
+      //alert( "finished" );
+    });
+}
 
 function calcul(nb_adulte,nb_enfant){
   a=tokyo.retour;
@@ -114,6 +134,7 @@ function calcul(nb_adulte,nb_enfant){
   return prix
 }
 function hello(){
+  console.log("hello")
   const username = document.getElementById('coname')
   const password = document.getElementById('copass')
   if (username=="etienne" && password=="coucou" || username=="silia" && password=="" || username=="prof" && password=="CeSiteEstMagnifiqueLesEtudiantsMeritentUneTresBonneNote"){
