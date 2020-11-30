@@ -135,13 +135,14 @@ function calcul(nb_adulte,nb_enfant){
 }
 function hello(){
   console.log("hello")
-  const username = document.getElementById('coname')
-  const password = document.getElementById('copass')
+  const username = document.getElementById('coname').innerHTML;
+  const password = document.getElementById('copass').innerHTML;
   if (username=="etienne" && password=="coucou" || username=="silia" && password=="" || username=="prof" && password=="CeSiteEstMagnifiqueLesEtudiantsMeritentUneTresBonneNote"){
     const connexion = document.getElementById("bonjour")
     connexion.innerHTML = "Bonjour "+ username + " !"
     console.log("oui")}
   else {console.log("non")}
+  
 }
 function change() {
   console.log("coucou")
