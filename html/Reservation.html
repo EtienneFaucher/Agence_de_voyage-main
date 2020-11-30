@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head onload="ville()">
+<head >
 <title>Agence de Voyage</title>
 
 <link rel="shortcut icon" type="image/png" href="../Images/favicon.ico"/>
@@ -15,7 +15,7 @@
 </div>
 </head>
 
-<body onload="buttonClickGET()">
+<body onload="reservez()">
 
     <div >
         <ul class="navigation"> 
@@ -65,8 +65,8 @@
     </div>
     <div class="formeGr">
         <label for="breakfast" >Souhaitez-vous le petit déjeuner?</label>
-        <input type="radio" id="breakfast" name="user_breakfast"> 
-        <label for="breakfast">Oui</label>
+        <input id="dej" type="radio" id="breakfast" name="user_breakfast"> 
+        <label id="oui" for="breakfast">Oui</label>
        
         <input type="radio" name="user_breakfast">
         <label for="breakfast" >Non</label>

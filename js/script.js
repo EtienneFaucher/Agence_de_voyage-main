@@ -1,3 +1,6 @@
+
+//Fonction Filtre des destinations
+
 filterSelection("all")
   function filterSelection(c) {
     var x, i;
@@ -30,7 +33,7 @@ filterSelection("all")
     element.className = arr1.join(" ");
   }
 
-  
+ // *****************************************************************************************  
 /*let destinations = [
   { ville: "Tokyo", image: "../Images/Tokyo.jpg", description: "Description de Tokyo", continent: "asie" },
   { ville: "Melbourne", image: "../Images/Melbourne.jpg", description: "Description de Melbourne", continent: "australie" },
@@ -65,11 +68,29 @@ document.getElementsByClassName("continent")[0].setAttribute("class", {{continen
         document.getElementById("par").style.backgroundImage = "url('../Images/Dubai.jpeg')"; ----- ça ne change que le style de la première template */
 
 
+// ************************************************************************************************
 
 
+//Fonction qui affiche le nom de la ville que la personne veut réserver.
+function reservez() {
+
+  u = new window.URLSearchParams(window.location.search)
+  
+  const ville = u.get("destination");
+  
+  console.log(ville)
+  let txtrecap = document.getElementById("dest")
+  txtrecap.innerHTML = "Votre voyage pour " + ville ;
+  }
+  
+  function pres() {
+  console.log("ville")
+  let presville = document.getElementById("ville")
+  presville.innerHTML = VILLE
+  }
   
   
-  var btnContainer = document.getElementById("myBtnContainer");
+  /*var btnContainer = document.getElementById("myBtnContainer");
   var btns = btnContainer.getElementsByClassName("btn");
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function(){
@@ -78,28 +99,10 @@ document.getElementsByClassName("continent")[0].setAttribute("class", {{continen
       this.className += " active";
     });
   }
+*/
 
-class Destination {
-  constructor(nom, prix_adulte, prix_enfant, prix_dej,description) {
-    this.nom = nom;
-    this.adultes = prix_adulte;
-    this.enfant = prix_enfant;
-    this.dej = prix_dej;
-    this.description = description
-  }
-  
-  get retour() {
-      return [this.adultes,this.enfant,this.description]
-  }
-  
-  
-}
-
-var tokyo = new Destination("Tokyo",50,30,9,"lorem  ")
-var dubai = new Destination("Dubai",50,30,9,"lorem")
-var venise = new Destination("Venise",50,30,9,"lorem")
-var melbourne = new Destination("Melbourne",50,30,9,"lorem")
-
+// Demande la ville de départ pour ajuster les voyages (prix, destination). 
+//Enlevée car dégrade l'experience utilisateur. 
 function ville_depart() {
   const depart=prompt("De quelle ville venez vous ?");
   console.log(depart)
@@ -107,12 +110,12 @@ function ville_depart() {
   dest.innerHTML= "Nos destination au départ de " + depart + ' !';
   console.log(dest)
 }
+//Fonction météo avec l'utilisation de l'API OpenWeatherMap
 var callBackGetSuccess = function(data) {
   var element = document.getElementById("zone_meteo");
   element.innerHTML = "La temperature est de " + data.main.temp + "°C";
   console.log(element)
 }
-
 
 function buttonClickGET() {
   var ville = document.getElementById("titre").innerHTML;
@@ -124,15 +127,29 @@ function buttonClickGET() {
   $.get(url, callBackGetSuccess).done(function() {
     })
     .always(function() {
-      //alert( "finished" );
     });
 }
 
+//Calcul du prix du voyage
 function calcul(nb_adulte,nb_enfant){
-  a=tokyo.retour;
-  prix= nb_adulte*a[0]+nb_enfant*a[1];
+  
+  prix= nb_adulte*50+nb_enfant*20;
   return prix
 }
+//Affichage du prix du voyage dans el formulaire de reservation
+function change() {
+  
+  const nb_adulte = document.getElementById('adults').value;
+  const nb_enfant = document.getElementById('kids').value;
+  
+  price= calcul(nb_adulte,nb_enfant)
+
+
+  let aff_prix = document.getElementById('prix');
+  aff_prix.innerHTML = "Le prix est maintenant de " + price+ "€";
+}
+
+//Fonction de connexion. Teste les mot de passe avec dex conditions.
 function hello(){
   console.log("hello")
   const username = document.getElementById('coname').innerHTML;
@@ -144,19 +161,8 @@ function hello(){
   else {console.log("non")}
   
 }
-function change() {
-  console.log("coucou")
-  const nb_adulte = document.getElementById('adults').value;
-  const nb_enfant = document.getElementById('kids').value;
-  
 
-  price= calcul(nb_adulte,nb_enfant)
-
-
-  let aff_prix = document.getElementById('prix');
-  aff_prix.innerHTML = "Le prix est maintenant de " + price+ "€";
-}
-
+//Fonction qui récapitule les données utilisateur pour qu'il les vérifient avant de payer.
 function recap() {
 console.log("recap")
 u = new window.URLSearchParams(window.location.search)
@@ -169,21 +175,6 @@ let txtrecap = document.getElementById("recap")
 txtrecap.innerHTML = "Bonjour M. ou Mme " + nom + "! Vous souhaitez réserver un voyage pour " + nb_adulte + " adultes, et " + nb_enfant +" enfants. Profitez de votre voyage !! ";
 }
 
-function reservez() {
 
-u = new window.URLSearchParams(window.location.search)
-
-const ville = u.get("destiantion");
-
-
-let txtrecap = document.getElementById("dest")
-txtrecap.innerHTML = "Votre voyage pour " + ville ;
-}
-
-function pres() {
-console.log("ville")
-let presville = document.getElementById("ville")
-presville.innerHTML = VILLE
-}
 
 
