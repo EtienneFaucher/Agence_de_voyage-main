@@ -114,13 +114,13 @@ function ville_depart() {
 var callBackGetSuccess = function(data) {
   var element = document.getElementById("zone_meteo");
   element.innerHTML = "La temperature est de " + data.main.temp + "°C";
-  console.log(element)
+  
 }
 
 function buttonClickGET() {
   var ville = document.getElementById("titre").innerHTML;
  
-  console.log(ville)
+  
 
   var url = "https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric"
 
@@ -149,16 +149,20 @@ function change() {
   aff_prix.innerHTML = "Le prix est maintenant de " + price+ "€";
 }
 
-//Fonction de connexion. Teste les mot de passe avec dex conditions.
+//Fonction de connexion. Teste les mot de passe avec des conditions.
 function hello(){
   console.log("hello")
-  const username = document.getElementById('coname').innerHTML;
-  const password = document.getElementById('copass').innerHTML;
+  const username = document.getElementById('coname').value;
+  const password = document.getElementById('copass').value;
+  console.log(username,password)
   if (username=="etienne" && password=="coucou" || username=="silia" && password=="" || username=="prof" && password=="CeSiteEstMagnifiqueLesEtudiantsMeritentUneTresBonneNote"){
     const connexion = document.getElementById("bonjour")
     connexion.innerHTML = "Bonjour "+ username + " !"
     console.log("oui")}
-  else {console.log("non")}
+  else {
+    console.log("non")
+    alert("Mauvais mot de passe")
+}
   
 }
 
