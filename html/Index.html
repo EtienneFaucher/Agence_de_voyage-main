@@ -76,52 +76,49 @@ class="close" title="Close Modal">&times;</span>
 </div>
 
   
-  <h2>Quels continent préférez-vous?:</h2>
+  <h1>Quels continent préférez-vous?:</h1>
   
   <div id="myBtnContainer">
     <button class="btn active" onclick="filterSelection('all')"> Afficher tout</button>
-    <button class="btn" onclick="filterSelection('cars')"> Asie</button>
-    <button class="btn" onclick="filterSelection('animals')"> Europe</button>
-    <button class="btn" onclick="filterSelection('fruits')"> Australie</button>
-    <button class="btn" onclick="filterSelection('colors')"> Amérique</button>
-    <button class="btn" onclick="filterSelection('none')"> Afrique</button>
-  </div>
+    <button class="btn" onclick="filterSelection('asie')"> Asie</button>
+    <button class="btn" onclick="filterSelection('europe')"> Europe</button>
+    <button class="btn" onclick="filterSelection('australie')"> Australie</button>
+    <button class="btn" onclick="filterSelection('amerique')"> Amérique</button>
+    <button class="btn" onclick="filterSelection('afrique')"> Afrique</button>
+  </div> 
   
   
-
- <!--- LA TEMPLATE 
   
   <template id="listeDestinations">
 
-    <div class="filterDiv {{continent}}>" // cest ce qu'on veut, mais ça ne marche pas 
+    <div class="class">
 
-    <div id="par" class="parallax1">
+      <div  class="parallax1">
 
-    <span class="titres">{{ville}}</br></span>
-    <span>Continent: {{continent}}</span>
+        <span class="titres">{{ville}}</br></span>
+        <span>Continent: {{continent}}</span>
 
-    <div class="descriptionContainer">
-    <span class="titreDescription"> Pourquoi {{ville}}?</span>
-    <br>
-    <br>
-    <span class="description"> {{description}}</span>
-    </div>
+        <div class="descriptionContainer">
+        <span class="titreDescription"> Pourquoi {{ville}}?</span>
+        <br>
+        <br>
+        <span class="description"> {{description}}</span>
 
-    <a href="Reservation.html?destination={{ville}}" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
-    <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
+        </div>
+        <a href="Reservation.html?destination={{ville}}" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
+        <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
 
       
+      </div>
     </div>
-    </div>
+  </template> 
 
-
-  </template> -->
 
 
 <!------------PARALLAXE SANS TEMPLATE -->
 
-
-<div class="filterDiv cars">
+<!--
+<div class="filterDiv asie">
  <div class="parallax1"> 
 
   <span id="titre" class="titres">Tokyo</span>
@@ -147,7 +144,7 @@ class="close" title="Close Modal">&times;</span>
 </div>
 
 
-<div class="filterDiv fruits">
+<div class="filterDiv australie">
 <div class="parallax2">
 
   <span class="titres">Melbourne</br></span>
@@ -173,7 +170,7 @@ class="close" title="Close Modal">&times;</span>
 </div>
 </div>
 
-<div class="filterDiv animals">
+<div class="filterDiv europe">
 <div class="parallax3">
 
   <span class="titres">Venise</br></span>
@@ -198,7 +195,7 @@ class="close" title="Close Modal">&times;</span>
 </div>
 </div>
 
-<div class="filterDiv cars">
+<div class="filterDiv asie">
 <div class="parallax4">
 
   <span class="titres">Dubai</br></span>
@@ -223,7 +220,7 @@ class="close" title="Close Modal">&times;</span>
 </div>
 </div>
 
-<div class="filterDiv colors">
+<div class="filterDiv amerique">
 <div class="parallax5">
 
   <span class="titres">Hawaii</br></span>
@@ -246,7 +243,7 @@ class="close" title="Close Modal">&times;</span>
 </div>
 </div>
 
-<div class="filterDiv animals">
+<div class="filterDiv europe">
 <div class="parallax6">
 
   <span class="titres">Florence</br></span>
@@ -269,7 +266,7 @@ class="close" title="Close Modal">&times;</span>
 
 </div>
 </div>
-
+-->
 
 </body>
 

@@ -128,10 +128,12 @@ img {
   margin: 2%;
 }
 
+.filterDiv_asie {
+  color: #130e3b;
+}
 
 
-
-.parallax2 {
+/*.parallax2 {
   
  
   background-image: url("../Images/Melbourne.jpg");
@@ -205,6 +207,7 @@ img {
   vertical-align: top;
   margin: 2%;
 }
+*/
 
 a.reservation{
   background-color: #7e3a3a;
@@ -233,17 +236,17 @@ a.reservation:hover{
   font-weight: 500;
 }
 
-.zone_meteo{
+/*.zone_meteo{
   text-align: center;
   color: white;
-  background-color: black/* #b95353 */;
+  background-color: black;
   opacity: 0.3;
   padding: 1% 2%;
   margin: 3% 42%;
   margin-bottom: 5%;
   border-radius: 15%;
 }
-
+*/
 #scroll_to_top {
   position: fixed;
   width: 25px;
