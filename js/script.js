@@ -119,8 +119,7 @@ var callBackGetSuccess = function(data) {
 }
 
 function buttonClickGET() {
-  var ville = document.getElementById("titre").innerHTML;
- 
+  var ville = document.getElementsByClassName("titres").innerHTML;
   
 
   var url = "https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric"
@@ -142,6 +141,14 @@ function change() {
   
   const nb_adulte = document.getElementById('adults').value;
   const nb_enfant = document.getElementById('kids').value;
+  const depart =document.getElementById('departure').valueAsDate
+  const retour =document.getElementById('return').valueAsDate
+  
+  
+  if (depart>retour) {
+    alert("La date de retour doit être superieur à la date d'arrivée")
+    retour.innerHTML = ""
+  }
   
   price= calcul(nb_adulte,nb_enfant)
 
