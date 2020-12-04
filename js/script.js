@@ -114,13 +114,13 @@ function ville_depart() {
 //Fonction météo avec l'utilisation de l'API OpenWeatherMap
 var callBackGetSuccess = function(data) {
   var element = document.getElementById("zone_meteo");
-  element.innerHTML = "La temperature est de " + data.main.temp + "°C";
+  element.innerHTML = "La temperature est actuellement de " + data.main.temp + "°C";
   
 }
 
 function buttonClickGET() {
-  var ville = document.getElementsByClassName("titres").innerHTML;
-  
+  var ville = document.getElementById("titre").innerHTML;
+  console.log(ville)
 
   var url = "https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric"
 
@@ -131,28 +131,34 @@ function buttonClickGET() {
 }
 
 //Calcul du prix du voyage
-function calcul(nb_adulte,nb_enfant){
+function calcul(nb_adulte,nb_enfant,depart,retour){
   
-  prix= nb_adulte*50+nb_enfant*20;
+  //duree du voyage
+  d=depart.getDate()
+  r=retour.getDate()
+  duree=r-d
+
+  //calcul du prix
+  prix= (nb_adulte*50+nb_enfant*20)*duree;
   return prix
 }
 //Affichage du prix du voyage dans el formulaire de reservation
 function change() {
-  
+  //on récupère les elements du formulaire
   const nb_adulte = document.getElementById('adults').value;
   const nb_enfant = document.getElementById('kids').value;
   const depart =document.getElementById('departure').valueAsDate
-  const retour =document.getElementById('return').valueAsDate
+  const retour =document.getElementById('return').valueAsDate  
   
-  
+  //On vérifie que les dates sont valides
   if (depart>retour) {
     alert("La date de retour doit être superieur à la date d'arrivée")
     retour.innerHTML = ""
   }
-  
-  price= calcul(nb_adulte,nb_enfant)
+  //on récupère le résultat du calcul
+  price= calcul(nb_adulte,nb_enfant,depart,retour)
 
-
+//on affiche le prix
   let aff_prix = document.getElementById('prix');
   aff_prix.innerHTML = "Le prix est maintenant de " + price+ "€";
 }
