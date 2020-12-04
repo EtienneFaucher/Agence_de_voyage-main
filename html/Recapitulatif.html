@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head onload="ville()">
+<head >
 <title>Agence de Voyage</title>
 
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -15,7 +15,7 @@
 </div>
 </head>
 
-<body onload="buttonClickGET()">
+<body onload="recap()">
 
     <div >
         <ul class="navigation"> 
@@ -27,6 +27,43 @@
             <li id="bonjour"></li>
         </ul>
     </div>
+
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'"
+      class="close" title="Close Modal">&times;</span>
+      
+       
+        <form class="modal-content animate" >
+      
+          <div class="container1">
+            <p>Connectez-vous!</p>
+            <div>
+              <label for="uname">Email ou téléphone</label>
+              <br>
+            <input id="coname" type="text" placeholder="ex: nom@gmail.com" name="uname" required>
+            </div>
+      
+            <div>
+            <label for="psw" >Mot de passe</label>
+            <br>
+            <input id="copass" type="password" placeholder="Entrez mot de passe" name="psw" required>
+            </div>
+          </div>
+      
+       
+          <div class="container2" >   
+            <div>
+            <button class="boutonForm" type="button" class="cancelbtn" onclick="hello(), document.getElementById('id01').style.display='none'" >Connexion</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Rester connecté
+            </label>
+            </div>
+            <button class="boutonForm" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuler</button>
+            <a href="#"><span class="psw">Mot de passe oublié?</a></span>
+          </div>
+      
+        </form>
+      </div>
 
 <h1>Récapitulatif de votre commande</h1>
 <p id="recap"> Mettre ici la fin de la commande apres avoir validé le formulaire</p>
