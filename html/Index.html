@@ -50,35 +50,40 @@ class="close" title="Close Modal">&times;</span>
       <div>
         <label for="uname">Email ou téléphone</label>
         <br>
-      <input id="coname" type="text" placeholder="ex: nom@gmail.com" name="uname" required>
+        <input id="coname" type="text" placeholder="ex: nom@gmail.com" name="uname" required>
       </div>
 
       <div>
-      <label for="psw" >Mot de passe</label>
-      <br>
-      <input id="copass" type="password" placeholder="Entrez mot de passe" name="psw" required>
+       <label for="psw" >Mot de passe</label>
+       <br>
+       <input id="copass" type="password" placeholder="Entrez mot de passe" name="psw" required>
       </div>
     </div>
 
  
     <div class="container2" >   
       <div>
-      <button class="boutonForm" type="button" class="cancelbtn" onclick="hello(), document.getElementById('id01').style.display='none'" >Connexion</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Rester connecté
-      </label>
+       <button class="boutonForm" type="button" class="cancelbtn" onclick="hello(), document.getElementById('id01').style.display='none'" >Connexion</button>
+       <br>
+       <label>
+         <input type="checkbox" checked="checked" name="remember"> Rester connecté
+       </label>
+       <br>
       </div>
       <button class="boutonForm" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuler</button>
-      <a href="#"><span class="psw">Mot de passe oublié?</a></span>
+      <br>
+      <div class="forgotPsw">
+        <a href="#"><span class="psw">Mot de passe oublié?</span></a>
+      </div>
     </div>
 
   </form>
 </div>
 
   
-  <h1>Quels continents préférez-vous?:</h1>
+  <h2>Quels continents préférez-vous?:</h2>
   
-  <div id="myBtnContainer">
+  <div id="myBtnContainer" class="btnContainer">
     <button class="btn active" onclick="filterSelection('all')"> Afficher tout</button>
     <button class="btn" onclick="filterSelection('asie')"> Asie</button>
     <button class="btn" onclick="filterSelection('europe')"> Europe</button>
@@ -96,7 +101,7 @@ class="close" title="Close Modal">&times;</span>
       <div  class="parallax1">
 
         <span class="titres">{{ville}}</span>
-        <span>Continent: {{continent}}</span>
+        <!--<span>Continent: {{continent}}</span>-->
 
         <div class="descriptionContainer">
         <span class="titreDescription"> Pourquoi {{ville}}?</span>

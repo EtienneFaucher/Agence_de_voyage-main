@@ -1,110 +1,214 @@
 html{
   font-family: lato;
-    margin: 0;
-    padding: 0;
-    /*background-image: url("../Images/airport.jpg");*/
-    background-attachment: scroll;
+  margin: 0;
+  padding: 0;
+  background-attachment: scroll;
 }
 
 body{
   background-color: #7e3a3a;
 }
+
 .navigation {
-    border-radius: 10%;
-    /*display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;*/
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    text-align: right;
-    list-style: none;
-    margin: 1%; 
-    background: #b95353;
-  }
+  border-radius: 10%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: safe;
+  text-align: left;
+  list-style: none;
+  margin: 1%; 
+  background: #b95353;
+}
   
-  .navigation a {
-    text-decoration: none;
-    display: block;
-    color: white;
-    padding: 1em;
-    text-align: left;
-  }
+.navigation a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 1em;
+}
 
-  .navigation .boutonCnx{
-    color: white;
-    opacity: 0.9;
-    font-family: lato;
-    background-color:  #130e3b;
-    border-radius: 20%;
-    cursor: pointer;
-    padding: 0.6em;
-    margin-top: 10%;
-  }
+.navigation .boutonCnx{
+  color: white;
+  opacity: 0.9;
+  font-family: lato;
+  background-color:  #130e3b;
+  border-radius: 20%;
+  cursor: pointer;
+  padding: 0.6em;
+  margin-top: 15%;
+  border: none;
+}
 
-  .boutonCnx:hover{
-    background:#4d2a2a;
-  }
-  
-  .navigation a:hover {
-    background: #4d2a2a;
-  }
+.boutonCnx:hover{
+  background:#4d2a2a;
+ }
+
+.navigation a:hover {
+  background: #4d2a2a;
+}
+
+.modal {
+  color: white;
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: scrolls; 
+  background-color: rgba(0, 0, 0, 0.9); 
+  padding-top: 0%;
+}
+
+
+.modal-content {
+  font-family: lato;
+  font-weight: 400;
+  background-color:rgba(126, 58, 58, 0.7);
+  text-align: center;
+
+  margin: 15% auto; 
+  border: 50% solid rgb(45, 25, 228);
+  width: 50%; 
+  border-radius: 5%;
+}
+
+.container1{
+  font-size: 130%;
+  padding: 5%;
+  text-align: center;
+  font-weight: 500;
+}
+
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.container2{
+  text-align: center;
+}
+
+.boutonForm{
+  padding: 0.5% 5%;
+  width: 20%;
+  margin-bottom: 2%;
+  border: none;
+  border-radius: 10%;
+  background-color: grey;
+  color: rgb(56, 55, 55);
+}
+
+.boutonForm:hover{
+  color: white;
+  background-color: #4d2a2a;
+}
+
+.close:hover{
+  color: #b95353;
+  cursor: pointer;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
 
 h1{ 
-    font-weight: 500;
-    background:#b95353;
-    /* rgba(126, 58, 56, 0.5);*/
-    text-align: center;
-    color: white;
-    border-style: solid;
-    border-width: 1px;
-    border-color:   #b95353;
-    border-radius: 10%;
-    margin: 3% 15%;
-    padding: 30px 50px 30px ;
-    }
+  font-weight: 500;
+  background:#b95353;
+  text-align: center;
+  color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color:   #b95353;
+  border-radius: 10%;
+  margin: 2.5% 15%;
+  padding: 30px 50px 30px ;
+  text-shadow: rgb(250, 250, 250) 1px 0 10px;
+}
 
-    .filterDiv {
-      
-      display: none;
-    }
+h2{ 
+  font-weight: bold;
+  font-size: medium;
+  background:#b9535394;
+  text-align: center;
+  color: rgb(235, 214, 214);
+  border-style: solid;
+  border-width: 1px;
+  border-color:   #b95353;
+  border-radius: 10%;
+  margin: 0% 40%;
+  padding: 20px 50px 20px ;
+}
+
+.filterDiv {  
+  display: none;
+}
     
-    .show {
-      display: block;
-    }
+.show {
+  display: block;
+}
     
-    .container {
-      margin-top: 20px;
-      overflow: hidden;
-    }
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
     
-    /* Style the buttons */
-    .btn {
-      border: none;
-      outline: none;
-      padding: 12px 16px;
-      background-color: #f1f1f1;
-      cursor: pointer;
-    }
+.btn {
+  color: white;
+  opacity: 0.9;
+  font-family: lato;
+  font-size: 140%;
+  background-color:  #130e3b;
+  border-radius: 20%;
+  cursor: pointer;
+  padding: 0.6em;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: none;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #4d2a2a;
+ }
     
-    .btn:hover {
-      background-color: #ddd;
-    }
-    
-    .btn.active {
-      background-color: #666;
-      color: white;
-    }
+.btn.active {
+  background-color: #4d2a2a;
+  color: white;
+}
+
+.btnContainer{
+  text-align: center;
+}
 
 span.titres{
   font-weight: 475;
+  font-size: 390%;
   background-color:#7e3a3a;
   border-radius: 15%;
   padding: 1% 10% 1% 10%;
   margin: 5% 25%;
   color: white;
   text-align: center;
-  font-size: 400%;
+  text-shadow: rgb(250, 250, 250) 1px 0 10px;
 }
 
 img {
@@ -113,8 +217,6 @@ img {
 }
 
 .parallax1 {
-  
- 
   background-image: url("../Images/Tokyo.jpg");
   min-height: 600px; 
   border-radius: 10%;
@@ -127,11 +229,6 @@ img {
   vertical-align: top;
   margin: 2%;
 }
-
-.filterDiv_asie {
-  color: #130e3b;
-}
-
 
 /*.parallax2 {
   
@@ -213,8 +310,9 @@ a.reservation{
   background-color: #7e3a3a;
   text-decoration: none;
   padding: 1% 5%;
-  color: white;
   border-radius: 5%;
+  text-shadow: rgb(250, 250, 250) 1px 0 10px;
+  color: white
 }
 
 a.reservation:hover{
@@ -234,9 +332,10 @@ a.reservation:hover{
 
 .titreDescription{
   font-weight: 500;
+  text-shadow: rgb(250, 250, 250) 1px 0 10px;
 }
 
-/*.zone_meteo{
+.zone_meteo{
   text-align: center;
   color: white;
   background-color: black;
@@ -246,7 +345,7 @@ a.reservation:hover{
   margin-bottom: 5%;
   border-radius: 15%;
 }
-*/
+
 #scroll_to_top {
   position: fixed;
   width: 25px;
@@ -258,75 +357,7 @@ a.reservation:hover{
   width: 50px;
   height: 50px;
 }
-.modal {
-  color: white;
-  display: none;
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: scrolls; 
-  background-color: rgba(0, 0, 0, 0.9); 
-  padding-top: 0%;
-}
 
-
-.modal-content {
-  font-family: lato;
-  font-weight: 200;
-  background-color:rgba(126, 58, 58, 0.7);
-
-  margin: 15% auto; 
-  border: 50% solid rgb(45, 25, 228);
-  width: 50%; 
-  border-radius: 5%;
-}
-
-.container1{
-  padding: 10%;
-  text-align: center;
-  font-weight: 500;
-}
-
-
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: white;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover{
-  color: #b95353;
-  cursor: pointer;
-}
-
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
-}
-
-.container2{
-  text-align: center;
-}
-
-.boutonForm{
-  padding: 1% 5%;
-}
 
 footer{
   display: flex;
