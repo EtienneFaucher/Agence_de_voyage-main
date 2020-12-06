@@ -53,25 +53,32 @@
        
           <div class="container2" >   
             <div>
-            <button class="boutonForm" type="button" class="cancelbtn" onclick="hello(), document.getElementById('id01').style.display='none'" >Connexion</button>
-            <label>
-              <input type="checkbox" checked="checked" name="remember"> Rester connecté
-            </label>
+             <button class="boutonForm" type="button" class="cancelbtn" onclick="hello(), document.getElementById('id01').style.display='none'" >Connexion</button>
+             <br>
+             <label>
+               <input type="checkbox" checked="checked" name="remember"> Rester connecté
+             </label>
+             <br>
             </div>
             <button class="boutonForm" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuler</button>
-            <a href="#"><span class="psw">Mot de passe oublié?</a></span>
+            <br>
+            <div class="forgotPsw">
+              <a href="#"><span class="psw">Mot de passe oublié?</span></a>
+            </div>
           </div>
       
         </form>
       </div>
 
 <h1>Récapitulatif de votre commande</h1>
-<p id="recap"> Mettre ici la fin de la commande apres avoir validé le formulaire</p>
+<div class="recap">
+  <p id="recap"> Mettre ici la fin de la commande apres avoir validé le formulaire</p>
+</div>
 
 </body>
 
 <footer>
-        Site crée par Silia Taider et Etienne Faucher
+  Site crée par Silia Taider et Etienne Faucher
 </footer>
 
 <script src="../js/script.js"></script>

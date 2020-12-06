@@ -18,6 +18,8 @@ body{
   list-style: none;
   margin: 1%; 
   background: #b95353;
+  font-size: large;
+  font-weight: 400;
 }
   
 .navigation a {
@@ -93,6 +95,11 @@ body{
 
 .container2{
   text-align: center;
+}
+
+.bonjour{
+  color: white;
+  width: 35%;
 }
 
 .boutonForm{
@@ -358,20 +365,6 @@ a.reservation:hover{
   height: 50px;
 }
 
-
-footer{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  list-style: none;
-  margin-left: 40%;
-  margin-right: 40% ; 
-  padding: 1% 5%;
-  background:#b95353;
-  text-align: center;
-  border-radius: 5%;
-}
-
 .mapImg{
   width: 100%;
   height: 100%;
@@ -386,6 +379,10 @@ footer{
   background-color: #130e3b;
   padding: 0% 10%;
   margin: 5% 30%;
+}
+
+.form{
+  font-size: large;
 }
 
 .form p{
@@ -405,20 +402,20 @@ footer{
 
 .form input{
   opacity: 80%;
-      border-radius: 20%;
-      border-color: #b95353;
+  border-radius: 20%;
+  border-color: #b95353;
 }
 
 .form textarea{
   opacity: 80%;
-      border-radius: 20%;
-      border-color: #b95353;
+  border-radius: 20%;
+  border-color: #b95353;
 }
 
 .form select{
   opacity: 80%;
-      border-radius: 20%;
-      border-color: #b95353;
+  border-radius: 20%;
+  border-color: #b95353;
 }
 
 .bouton{
@@ -428,8 +425,42 @@ footer{
   margin: 10%;
 }
 
-.bonjour{
+.apropos{
   color: white;
-  width: 35%;
-  
+  text-align: center;
+  border: white solid 2px;
+  border-radius: 15%;
+  font-size: large;
+  font-weight: 500;
+  margin: 5% 20%;
+}
+
+.apropos a{ 
+  color:  #130e3b;
+}
+.apropos a:hover{ 
+  color: white;
+}
+
+.recap{
+  color: white;
+  text-align: center;
+  font-size: x-large;
+  font-weight: 500;
+  border: white solid 1px;
+  border-radius: 10%;
+  margin: 12% 20%;
+}
+
+footer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  list-style: none;
+  margin-left: 40%;
+  margin-right: 40% ; 
+  padding: 1% 5%;
+  background:#b95353;
+  text-align: center;
+  border-radius: 5%;
 }

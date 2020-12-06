@@ -1,6 +1,13 @@
+let destinations = [
+  { ville: "Tokyo", prix:"50", image: "../Images/Tokyo.jpg", description: "Tokyo, la plus grande mégalopole au monde,compte parmi les destinations uniques, où les voyageurs communienttant avec la technologie qu'avec la nature et les traditions ancestrales. Tokyo la magnétique, au pays du Soleil Levant, offre un cocktail de saveurs et de sensations, au goût implosif et singulier.", continent: "asie" },
+  { ville: "Melbourne", prix:"30", image: "../Images/Melbourne.jpg", description: "La ville colorée et pleine de vie de Melbourne a dequoi plaire à tous les types de voyageurs, entre ses cafés confortables, son art local, l'histoire australienne et aborigène jusqu'aux divers sports auxquels assister. Commencez votre journée avec un « flat white » (sorte de café latte à base d'espresso) avant d'emprunter gratuitement le City Circle Tram pour découvrir des attractions singulières comme les jardins botaniques royaux et la réserve de Healesville où vous attendent de nombreux animaux.</", continent: "australie" },
+  { ville: "Venise", prix:"30" , image: "../Images/Venise.jpg", description: "Venise est une ville enchanteresse qui envoute ses visiteurs par son charme incroyable. C'est un lieu de rêve et de romantisme où se mêlent le mystère et le drame. Et si le Carnaval n'a lieu qu'une fois par an, son ambiance est présente tout au long de l'année. Le Grand Canal est le centre de l'activité, les gondoliers chantant pour les passagers installés dans leurs petites embarcations.", continent: "europe" },
+  { ville: "Dubai", prix:"30", image: "../Images/Dubai.jpeg", description: "Le plus grand… Le plus haut… Le plus long… Les superlatifs finissent par manquer pour décrire les attractions de Dubaï, une ville qui se distingue par son design ultra-moderne dans un pays historiquement conservateur. Les gratte-ciel vertigineux, les îles en forme de palmiers et les plages dorées, la vie nocturne vibrante, le shopping de luxe et les restaurants de classe mondiale font de la ville un endroit à contempler et à explorer.", continent:"asie" },
+  { ville: "Hawaii",  prix:"30", image: "../Images/Hawaii.jpg", description: "À Hawaii les forces brutes de la nature semblent s'être conjuguées pour former le plus beau décor du monde. Les volcans, nés des profondeurs de l’océan, ont façonné les îles une à une, projetant encore aujourd’hui leur magma incandescent en fontaines ou en coulées rougeoyantes. Réplique de l’apparition de la vie sur terre.", continent: "amerique" },
+  { ville: "Florence", prix:"30", image: "../Images/Florence.jpg", description: "Florence fait battre le cœur des amateurs d'art. Si vous aimez particulièrement la période de la Renaissance, la Galleria dell'Accademia vous fera tourner la tête, avec notamment de nombreuses œuvres de Michel-Ange. Les fanas d'architecture pourront admirer l'antique Ponte Vecchio, tandis que les amateurs de lèche-vitrines pourront se régaler à courir les boutiques de la Piazza Santo Spirito pendant tout un après-midi.", continent: "europe" }
+];
 
 //Fonction Filtre des destinations
-
 filterSelection("all")
   function filterSelection(c) {
     var x, i;
@@ -33,16 +40,7 @@ filterSelection("all")
     element.className = arr1.join(" ");
   }
 
- 
-let destinations = [
-  { ville: "Tokyo", prix:"50", image: "../Images/Tokyo.jpg", description: "Tokyo, la plus grande mégalopole au monde,compte parmi les destinations uniques, où les voyageurs communienttant avec la technologie qu'avec la nature et les traditions ancestrales. Tokyo la magnétique, au pays du Soleil Levant, offre un cocktail de saveurs et de sensations, au goût implosif et singulier.", continent: "asie" },
-  { ville: "Melbourne", prix:"30", image: "../Images/Melbourne.jpg", description: "La ville colorée et pleine de vie de Melbourne a dequoi plaire à tous les types de voyageurs, entre ses cafés confortables, son art local, l'histoire australienne et aborigène jusqu'aux divers sports auxquels assister. Commencez votre journée avec un « flat white » (sorte de café latte à base d'espresso) avant d'emprunter gratuitement le City Circle Tram pour découvrir des attractions singulières comme les jardins botaniques royaux et la réserve de Healesville où vous attendent de nombreux animaux.</", continent: "australie" },
-  { ville: "Venise", prix:"30" , image: "../Images/Venise.jpg", description: "Venise est une ville enchanteresse qui envoute ses visiteurs par son charme incroyable. C'est un lieu de rêve et de romantisme où se mêlent le mystère et le drame. Et si le Carnaval n'a lieu qu'une fois par an, son ambiance est présente tout au long de l'année. Le Grand Canal est le centre de l'activité, les gondoliers chantant pour les passagers installés dans leurs petites embarcations.", continent: "europe" },
-  { ville: "Dubai", prix:"30", image: "../Images/Dubai.jpeg", description: "Le plus grand… Le plus haut… Le plus long… Les superlatifs finissent par manquer pour décrire les attractions de Dubaï, une ville qui se distingue par son design ultra-moderne dans un pays historiquement conservateur. Les gratte-ciel vertigineux, les îles en forme de palmiers et les plages dorées, la vie nocturne vibrante, le shopping de luxe et les restaurants de classe mondiale font de la ville un endroit à contempler et à explorer.", continent:"asie" },
-  { ville: "Hawaii",  prix:"30", image: "../Images/Hawaii.jpg", description: "À Hawaii les forces brutes de la nature semblent s'être conjuguées pour former le plus beau décor du monde. Les volcans, nés des profondeurs de l’océan, ont façonné les îles une à une, projetant encore aujourd’hui leur magma incandescent en fontaines ou en coulées rougeoyantes. Réplique de l’apparition de la vie sur terre.", continent: "amerique" },
-  { ville: "Florence", prix:"30", image: "../Images/Florence.jpg", description: "Florence fait battre le cœur des amateurs d'art. Si vous aimez particulièrement la période de la Renaissance, la Galleria dell'Accademia vous fera tourner la tête, avec notamment de nombreuses œuvres de Michel-Ange. Les fanas d'architecture pourront admirer l'antique Ponte Vecchio, tandis que les amateurs de lèche-vitrines pourront se régaler à courir les boutiques de la Piazza Santo Spirito pendant tout un après-midi.", continent: "europe" }
-];
-
+// Template
  let template = document.querySelector("#listeDestinations");
 
 for (const d of destinations) {					
@@ -64,15 +62,6 @@ for (const d of destinations) {
     
     
 }
-
-//document.getElementsByClassName("continent")[0].setAttribute("class", {{continent}}); ---- ça ne donne pas à chaque destination sa classe
-
-
-        /*document.getElementById("par").style.color = "blue";
-        document.getElementById("par").style.backgroundImage = "url('../Images/Dubai.jpeg')"; ----- ça ne change que le style de la première template */
-
-
-
 
 //Fonction qui affiche le nom de la ville que la personne veut réserver.
 function reservez() {
@@ -110,6 +99,7 @@ function ville_depart() {
   let dest=document.getElementById('destination');
   dest.innerHTML= "Nos destination au départ de " + depart + ' !';
 }
+
 //Fonction météo avec l'utilisation de l'API OpenWeatherMap
 var callBackGetSuccess = function(data) {
   var element = document.getElementById("zone_meteo");
@@ -171,8 +161,6 @@ function calcul(nb_adulte,nb_enfant,depart,retour,prix){
 //on affiche le prix
   let aff_prix = document.getElementById('prix');
   aff_prix.innerHTML = "Le prix est maintenant de " + price+ "€";
-
-
 }
 
 
@@ -197,6 +185,6 @@ function recap() {
   const nom = u.get("user_name");
 
   let txtrecap = document.getElementById("recap")
-  txtrecap.innerHTML = "Bonjour M. ou Mme " + nom + "! Vous souhaitez réserver un voyage pour " + nb_adulte + " adultes, et " + nb_enfant +" enfants. Profitez de votre voyage !! ";
+  txtrecap.innerHTML = "Bonjour M. ou Mme " + nom + "! <br\> Vous souhaitez réserver un voyage pour " + nb_adulte + " adultes, et " + nb_enfant +" enfants. <br\> Profitez de votre voyage !! ";
   }
   
