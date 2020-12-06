@@ -110,21 +110,29 @@ function ville_depart() {
 }
 
 //Fonction météo avec l'utilisation de l'API OpenWeatherMap
-var callBackGetSuccess = function(data) {
-  var element = document.getElementById("zone_meteo");
-  element.innerHTML = "La temperature est actuellement de " + data.main.temp + "°C";
-  
+var n=0
+var appliAPI = function(data) {
+  var element = document.getElementsByClassName("zone_meteo");
+  var zone = element[n]
+  n=n+1
+  zone.innerHTML = "La temperature actuelle est de " + data.main.temp + " °C";
+
 }
 
-function buttonClickGET() {
-  var ville = document.getElementById("titre").innerHTML;
-
-  var url = "https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric"
-
-  $.get(url, callBackGetSuccess).done(function() {
+function appelAPI() {
+  for (var i in destinations){
+    ville = new Array(destinations[i].ville)
+    var url = "https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric"
+    
+    $.get(url, appliAPI).done(function() {
     })
     .always(function() {
+      //alert( "finished" );
     });
+
+   
+   
+}
 }
 
 //Calcul du prix du voyage
