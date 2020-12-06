@@ -69,11 +69,11 @@ body{
   font-weight: 400;
   background-color:rgba(126, 58, 58, 0.7);
   text-align: center;
-
   margin: 15% auto; 
   border: 50% solid rgb(45, 25, 228);
-  width: 50%; 
+  width: 35%; 
   border-radius: 5%;
+  padding-bottom: 2%;
 }
 
 .container1{
@@ -97,14 +97,20 @@ body{
   text-align: center;
 }
 
+.container2 a{ 
+  color:  #130e3b;
+}
+.container2 a:hover{ 
+  color: white;
+}
 .bonjour{
   color: white;
   width: 35%;
 }
 
 .boutonForm{
-  padding: 0.5% 5%;
-  width: 20%;
+  padding: 0.5% 0.5%;
+  width: 25%;
   margin-bottom: 2%;
   border: none;
   border-radius: 10%;
