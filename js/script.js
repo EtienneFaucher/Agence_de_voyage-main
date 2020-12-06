@@ -7,6 +7,15 @@ let destinations = [
   { ville: "Florence", prix:"30", image: "../Images/Florence.jpg", description: "Florence fait battre le cœur des amateurs d'art. Si vous aimez particulièrement la période de la Renaissance, la Galleria dell'Accademia vous fera tourner la tête, avec notamment de nombreuses œuvres de Michel-Ange. Les fanas d'architecture pourront admirer l'antique Ponte Vecchio, tandis que les amateurs de lèche-vitrines pourront se régaler à courir les boutiques de la Piazza Santo Spirito pendant tout un après-midi.", continent: "europe" }
 ];
 
+let baseDonnees = [
+  { user: "Tokyo", psw:"50"},
+  { user: "etienne", psw:"coucou"},
+  { user: "silia", psw:"kawai"},
+  { user: "gregory", psw:"morel"},
+  { user: "site", psw:"web"},
+  { user: "givors", psw:"1976"}
+];
+
 //Fonction Filtre des destinations
 filterSelection("all")
   function filterSelection(c) {
@@ -168,12 +177,24 @@ function calcul(nb_adulte,nb_enfant,depart,retour,prix){
 function hello() {
   const username = document.getElementById('coname').value;
   const password = document.getElementById('copass').value;
-  if (username=="etienne" && password=="coucou" || username=="silia" && password=="" || username=="prof" && password=="CeSiteEstMagnifiqueLesEtudiantsMeritentUneTresBonneNote"){
+
+  for (i=0; i< baseDonnees.length; i++){
+    if (baseDonnees[i].user==username && baseDonnees[i].psw==password) {
+      const connexion = document.getElementById("bonjour")
+      connexion.innerHTML = "Bonjour "+ username + " !"
+      break
+    }
+    else {
+      alert("Mot de passe incorrect")
+    } 
+  }
+  /*if (username=="etienne" && password=="coucou" || username=="silia" && password=="kawai" || username=="prof" && password=="CeSiteEstMagnifiqueLesEtudiantsMeritentUneTresBonneNote"){
     const connexion = document.getElementById("bonjour")
-    connexion.innerHTML = "Bonjour "+ username + " !"}
+    connexion.innerHTML = "Bonjour "+ username + " !"
+  }
   else {
     alert("Mauvais mot de passe")
-}
+  }*/
 }
 
 //Fonction qui récapitule les données utilisateur pour qu'il les vérifient avant de payer.
