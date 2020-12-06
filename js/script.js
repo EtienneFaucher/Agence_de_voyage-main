@@ -185,16 +185,18 @@ function calcul(nb_adulte,nb_enfant,depart,retour,prix){
 function hello() {
   const username = document.getElementById('coname').value;
   const password = document.getElementById('copass').value;
+  condition = false;
 
   for (i=0; i< baseDonnees.length; i++){
     if (baseDonnees[i].user==username && baseDonnees[i].psw==password) {
       const connexion = document.getElementById("bonjour")
       connexion.innerHTML = "Bonjour "+ username + " !"
+      condition = true;
       break
-    }
-    else {
-      alert("Mot de passe incorrect")
     } 
+  }
+  if (condition == false) {
+    alert("Mot de passe incorrect")
   }
   /*if (username=="etienne" && password=="coucou" || username=="silia" && password=="kawai" || username=="prof" && password=="CeSiteEstMagnifiqueLesEtudiantsMeritentUneTresBonneNote"){
     const connexion = document.getElementById("bonjour")
