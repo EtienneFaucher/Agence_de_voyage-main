@@ -123,7 +123,7 @@ var appliAPI = function(data) {
 function appelAPI() {
   //Boucle pour appeler la fonction à chaque ville.
   filterSelection("all");
-  
+
   for (var i in destinations){
     ville = new Array(destinations[i].ville)
     var url = "https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric"
@@ -201,10 +201,15 @@ function hello() {
     if (baseDonnees[i].user==username && baseDonnees[i].psw==password) {
       const connexion = document.getElementById("bonjour")
       connexion.innerHTML = "Bonjour "+ username + " !"
+      connexion.style.color = "white"
+      connexion.style.padding = "1em"
+      connexion.style.fontWeight = "500"
+      connexion.style.textShadow ="rgb(250, 250, 250) 1px 0 10px"
       condition = true;
       break
     } 
   }
+
   if (condition == false) {
     alert("Mot de passe incorrect")
   }

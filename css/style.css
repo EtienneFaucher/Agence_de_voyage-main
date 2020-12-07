@@ -37,7 +37,7 @@ body{
   border-radius: 20%;
   cursor: pointer;
   padding: 0.6em;
-  margin-top: 15%;
+  margin-top: 20%;
   border: none;
 }
 
@@ -78,7 +78,7 @@ body{
 }
 
 .container1{
-  font-size: 130%;
+  font-size: 100%;
   padding: 5%;
   text-align: center;
   font-weight: 500;
@@ -155,7 +155,7 @@ h1{
   border-width: 1px;
   border-color:   #b95353;
   border-radius: 10%;
-  margin: 2.5% 15%;
+  margin: 1% 15%;
   padding: 30px 50px 30px ;
   text-shadow: rgb(250, 250, 250) 1px 0 10px;
 }
@@ -197,7 +197,7 @@ h2{
   cursor: pointer;
   padding: 0.6em;
   margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 0%;
   border: none;
   text-align: center;
 }
@@ -358,7 +358,7 @@ a.reservation:hover{
   opacity: 0.8;
   padding: 1% 2%;
   margin: 3% 42%;
-  margin-bottom: 10%;
+  margin-bottom: %;
   border-radius: 15%;
 }
 
@@ -470,11 +470,6 @@ a.reservation:hover{
   vertical-align: middle; 
 }
 
-.iframeVideo {
-  position: absolute;
-  top: 400px;
-  left: 100px;
-}
 
 footer{
   display: flex;
