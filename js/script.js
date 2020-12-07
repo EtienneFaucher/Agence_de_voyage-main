@@ -144,7 +144,7 @@ function calcul(nb_adulte,nb_enfant,depart,retour,prix){
   duree=r-d
 
   //calcul du prix
-  prix= (nb_adulte*prix+nb_enfant*(prix/2))*duree;
+  prix= (nb_adulte*prix+nb_enfant*(prix*0.4))*duree;
   return prix
 }
 
