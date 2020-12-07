@@ -352,10 +352,10 @@ a.reservation:hover{
   text-align: center;
   color: white;
   background-color: black;
-  opacity: 0.3;
+  opacity: 0.5;
   padding: 1% 2%;
   margin: 3% 42%;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   border-radius: 15%;
 }
 
