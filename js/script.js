@@ -232,7 +232,9 @@ function recap() {
   
   function entreSVG(city, element) {
     document.getElementById(element).setAttribute("fill","#b95353");
-  
+    document.getElementById("video").hidden=false
+    document.getElementById('video').src="https://www.youtube.com/embed/-SL9KRvzVmo" 
+    
   }
   
   function sortSVG(element) {
