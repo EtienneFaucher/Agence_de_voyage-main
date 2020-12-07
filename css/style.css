@@ -246,81 +246,7 @@ img {
   margin: 2%;
 }
 
-/*.parallax2 {
-  
- 
-  background-image: url("../Images/Melbourne.jpg");
-  min-height: 600px; 
-  border-radius: 10%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-  text-align: center;
-  color: antiquewhite;
-  vertical-align: top;
-  margin: 2%;
-}
 
-.parallax3 {
-  
-  background-image: url("../Images/Venise.jpg");
-  min-height: 600px; 
-  border-radius: 10%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-  text-align: center;
-  color: antiquewhite;
-  vertical-align: top;
-  margin: 2%;
-}
-.parallax4 {
-  
-  background-image: url("../Images/Dubai.jpeg");
-  min-height: 600px; 
-  border-radius: 10%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-  text-align: center;
-  color: antiquewhite;
-  vertical-align: top;
-  margin: 2%;
-}
-
-.parallax5 {
-  
-  background-image: url("../Images/Hawaii.jpg");
-  min-height: 600px; 
-  border-radius: 10%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-  text-align: center;
-  color: antiquewhite;
-  vertical-align: top;
-  margin: 2%;
-}
-
-.parallax6 {
-  
-  background-image: url("../Images/Florence.jpg");
-  min-height: 600px; 
-  border-radius: 10%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-  text-align: center;
-  color: antiquewhite;
-  vertical-align: top;
-  margin: 2%;
-}
-*/
 
 a.reservation{
   background-color: #7e3a3a;
@@ -358,7 +284,6 @@ a.reservation:hover{
   opacity: 0.8;
   padding: 1% 2%;
   margin: 3% 42%;
-  margin-bottom: %;
   border-radius: 15%;
 }
 
