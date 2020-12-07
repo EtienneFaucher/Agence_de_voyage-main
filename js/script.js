@@ -1,3 +1,4 @@
+// Notre "Base de donnée". Les destinations puis les utilisateurs.
 let destinations = [
   { ville: "Tokyo", prix:"50", image: "../Images/Tokyo.jpg", description: "Tokyo, la plus grande mégalopole au monde,compte parmi les destinations uniques, où les voyageurs communienttant avec la technologie qu'avec la nature et les traditions ancestrales. Tokyo la magnétique, au pays du Soleil Levant, offre un cocktail de saveurs et de sensations, au goût implosif et singulier.", continent: "asie" },
   { ville: "Melbourne", prix:"30", image: "../Images/Melbourne.jpg", description: "La ville colorée et pleine de vie de Melbourne a dequoi plaire à tous les types de voyageurs, entre ses cafés confortables, son art local, l'histoire australienne et aborigène jusqu'aux divers sports auxquels assister. Commencez votre journée avec un « flat white » (sorte de café latte à base d'espresso) avant d'emprunter gratuitement le City Circle Tram pour découvrir des attractions singulières comme les jardins botaniques royaux et la réserve de Healesville où vous attendent de nombreux animaux.</", continent: "australie" },
@@ -16,7 +17,7 @@ let baseDonnees = [
   { user: "givors", psw:"1976"}
 ];
 
-//Fonction Filtre des destinations
+//Fonction Filtre des destinations. 
 filterSelection("all")
   function filterSelection(c) {
     var x, i;
@@ -76,9 +77,9 @@ for (const d of destinations) {
 function reservez() {
 
   u = new window.URLSearchParams(window.location.search)
-  
+  //récupère la destination choisie
   const ville = u.get("destination");
-  
+  //Change l'intitulé de la page.
   let txtrecap = document.getElementById("dest")
   txtrecap.innerHTML = "Votre voyage pour " + ville ;
   }
