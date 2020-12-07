@@ -27,8 +27,8 @@ filterSelection("all")
       w3RemoveClass(x[i], "show");
       if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
     }
-  }
-  
+  }  
+
   function w3AddClass(element, name) {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
@@ -122,6 +122,8 @@ var appliAPI = function(data) {
 
 function appelAPI() {
   //Boucle pour appeler la fonction à chaque ville.
+  filterSelection("all");
+  
   for (var i in destinations){
     ville = new Array(destinations[i].ville)
     var url = "https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric"
@@ -131,10 +133,8 @@ function appelAPI() {
     })
     .always(function() {
       
-    });
 
-   
-   
+    });
 }
 }
 
@@ -230,13 +230,15 @@ function recap() {
   txtrecap.innerHTML = "Bonjour M. ou Mme " + nom + "! <br\> Vous souhaitez réserver un voyage pour " + nb_adulte + " adultes, et " + nb_enfant +" enfants. <br\> Votre numero de reservation est le : " + num_reserv+ "<br\>Profitez de votre voyage !! ";
   }
   
-  function entreSVG(idDestination, element) {
-    document.getElementById(element).setAttribute("fill","red");
-    document.getElementById("video").hidden=false 
-    document.getElementById("video").src="https://www.youtube.com/embed/"+destinations[idDestination][5]+"?autoplay=1"
+  function entreSVG(city, element) {
+    document.getElementById(element).setAttribute("fill","#b95353");
+  
   }
   
   function sortSVG(element) {
-    document.getElementById(element).setAttribute("fill","transparent"); 
-    document.getElementById("video").hidden=true
+    document.getElementById(element).setAttribute("fill","#130e3b"); 
+  }
+
+  function cliqueImage(city){
+    document.location.href="Reservation.html?destination=" + city; 
   }
