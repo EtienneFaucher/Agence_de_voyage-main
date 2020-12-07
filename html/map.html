@@ -2,17 +2,17 @@
 <html lang="fr">
  
 <link rel="stylesheet" href="../css/style.css"/>
-"<!--<img class="mapImg" src="../Images/Map.svg" alt="Retourner en haut" /> -->
+<!--<img class="mapImg" src="../Images/Map.svg" alt="Retourner en haut" /> -->
 
-<svg class="svg-container" width="1800" height="1600" viewBox="0 0 100 50">
+<svg class="svg-container" width="800" height="600" viewBox="0 0 500 300">
     <image x=0 y=0 width=500 height=300 xlink:href="http://johnsamuel.info/fr/enseignement/cours/2020/TLI/World_map_blank_without_borders.svg" />
-    <ellipse cx=55 cy=16 rx=1.5 ry=1.5 id="svgEgypte" fill="transparent" onmouseenter="entreSVG(0,'svgEgypte')" onmouseleave="sortSVG('svgEgypte')" onclick="cliqueImage(0)" />
-    <ellipse cx=45 cy=15 rx=1.0 ry=1.2 id="svgMaroc" fill="transparent" onmouseenter="entreSVG(1,'svgMaroc')" onmouseleave="sortSVG('svgMaroc')" onclick="cliqueImage(1)"/>
-    <ellipse cx=55 cy=32 rx=1.0 ry=1.2 id="svgzimbabwe" fill="transparent" onmouseenter="entreSVG(4,'svgzimbabwe')" onmouseleave="sortSVG('svgzimbabwe')" onclick="cliqueImage(4)"/>
-    <ellipse cx=57.5 cy=25.5 rx=1.0 ry=1.2 id="svgTanzanie" fill="transparent" onmouseenter="entreSVG(5,'svgTanzanie')" onmouseleave="sortSVG('svgTanzanie')" onclick="cliqueImage(5)"/>
-    <ellipse cx=53.5 cy=34.5 rx=2.0 ry=1.2 id="svgAfriqueSud" fill="transparent" onmouseenter="entreSVG(2,'svgAfriqueSud')" onmouseleave="sortSVG('svgAfriqueSud')" onclick="cliqueImage(2)"/>
-    <ellipse cx=60 cy=30 rx=1.0 ry=2.0 id="svgMadagascar" fill="transparent" onmouseenter="entreSVG(3,'svgMadagascar')" onmouseleave="sortSVG('svgMadagascar')" onclick="cliqueImage(3)"/>
+    <ellipse cx=420 cy=82 rx=7 ry=8 id="svgTokyo" fill="grey" onmouseenter="entreSVG(0,'svgTokyo')" onmouseleave="sortSVG('svgTokyo')" onclick="cliqueImage('Tokyo')"/> 
+    <ellipse cx=420 cy=195 rx=15 ry=12 id="svgMelbourne" fill="grey" onmouseenter="entreSVG(1,'svgMelbourne')" onmouseleave="sortSVG('svgMelbourne')" onclick="cliqueImage('Melbourne')"/>
+    <ellipse cx=255 cy=65 rx=5 ry=5 id="svgVenise" fill="grey" onmouseenter="entreSVG(4,'svgVenise')" onmouseleave="sortSVG('svgVenise')" onclick="cliqueImage('Venise')"/>
+    <ellipse cx=295 cy=105 rx=10 ry=8 id="svgDubai" fill="grey" onmouseenter="entreSVG(5,'svgDubai')" onmouseleave="sortSVG('svgDubai')" onclick="cliqueImage('Dubai')"/>
+    <ellipse cx=63 cy=60 rx=12 ry=10 id="svgHawaii" fill="grey" onmouseenter="entreSVG(2,'svgHawaii')" onmouseleave="sortSVG('svgHawaii')" onclick="cliqueImage('Hawaii')"/>
+    <ellipse cx=249 cy=73 rx=5 ry=5 id="svgFlorence" fill="grey" onmouseenter="entreSVG(3,'svgFlorence')" onmouseleave="sortSVG('svgFlorence')" onclick="cliqueImage('Florence')"/>
 </svg>
 
-<iframe class="iframeVideo" hidden=True width="500" height="300" id="video" allowfullscreen></iframe>
+<script src="../js/script.js"></script>
 </html>

@@ -439,6 +439,7 @@ a.reservation:hover{
   font-size: large;
   font-weight: 500;
   margin: 5% 20%;
+  padding: 2%;
 }
 
 .apropos a{ 
@@ -456,6 +457,20 @@ a.reservation:hover{
   border: white solid 1px;
   border-radius: 10%;
   margin: 12% 20%;
+}
+
+.svg-container { 
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  vertical-align: middle; 
+}
+
+.iframeVideo {
+  position: absolute;
+  top: 400px;
+  left: 100px;
 }
 
 footer{
