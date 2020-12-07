@@ -88,19 +88,6 @@ function reservez() {
   let presville = document.getElementById("ville")
   presville.innerHTML = VILLE
   }
-  
-  /*
-  var btnContainer = document.getElementById("myBtnContainer");
-  var btns = btnContainer.getElementsByClassName("btn");
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function(){
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-    });
-
-  }
-*/
 
 // Demande la ville de départ pour ajuster les voyages (prix, destination). 
 //Enlevée car dégrade l'experience utilisateur (Fonction jamais appelée)
@@ -213,13 +200,7 @@ function hello() {
   if (condition == false) {
     alert("Mot de passe incorrect")
   }
-  /*if (username=="etienne" && password=="coucou" || username=="silia" && password=="kawai" || username=="prof" && password=="CeSiteEstMagnifiqueLesEtudiantsMeritentUneTresBonneNote"){
-    const connexion = document.getElementById("bonjour")
-    connexion.innerHTML = "Bonjour "+ username + " !"
-  }
-  else {
-    alert("Mauvais mot de passe")
-  }*/
+  
 }
 
 //Fonction qui récapitule les données utilisateur pour qu'il les vérifient avant de payer.
