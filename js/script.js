@@ -230,3 +230,13 @@ function recap() {
   txtrecap.innerHTML = "Bonjour M. ou Mme " + nom + "! <br\> Vous souhaitez réserver un voyage pour " + nb_adulte + " adultes, et " + nb_enfant +" enfants. <br\> Votre numero de reservation est le : " + num_reserv+ "<br\>Profitez de votre voyage !! ";
   }
   
+  function entreSVG(idDestination, element) {
+    document.getElementById(element).setAttribute("fill","red");
+    document.getElementById("video").hidden=false 
+    document.getElementById("video").src="https://www.youtube.com/embed/"+destinations[idDestination][5]+"?autoplay=1"
+  }
+  
+  function sortSVG(element) {
+    document.getElementById(element).setAttribute("fill","transparent"); 
+    document.getElementById("video").hidden=true
+  }
