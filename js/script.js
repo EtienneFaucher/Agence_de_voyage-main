@@ -63,7 +63,7 @@ for (const d of destinations) {
 
         clone.firstElementChild.innerHTML = newContent
 
-        clone.firstElementChild.setAttribute("class", "filterDiv_" + d.continent);
+        clone.firstElementChild.setAttribute("class", "filterDiv " + d.continent);
      
         clone.firstElementChild.firstElementChild.style.backgroundImage="url('"+d.image+"')",		
         
