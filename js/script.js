@@ -221,8 +221,9 @@ function recap() {
   const nb_adulte = u.get("user_adults");
   const nb_enfant = u.get("user_kids");
   const nom = u.get("user_name");
+  const num_reserv= 1000*Math.random()
 
   let txtrecap = document.getElementById("recap")
-  txtrecap.innerHTML = "Bonjour M. ou Mme " + nom + "! <br\> Vous souhaitez réserver un voyage pour " + nb_adulte + " adultes, et " + nb_enfant +" enfants. <br\> Profitez de votre voyage !! ";
+  txtrecap.innerHTML = "Bonjour M. ou Mme " + nom + "! <br\> Vous souhaitez réserver un voyage pour " + nb_adulte + " adultes, et " + nb_enfant +" enfants. <br\> Votre numero de reservation est le : " + num_reserv+ "<br\>Profitez de votre voyage !! ";
   }
   
