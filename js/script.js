@@ -89,7 +89,7 @@ function reservez() {
   presville.innerHTML = VILLE
   }
   
-  
+  /*
   var btnContainer = document.getElementById("myBtnContainer");
   var btns = btnContainer.getElementsByClassName("btn");
   for (var i = 0; i < btns.length; i++) {
@@ -100,10 +100,10 @@ function reservez() {
     });
 
   }
-
+*/
 
 // Demande la ville de départ pour ajuster les voyages (prix, destination). 
-//Enlevée car dégrade l'experience utilisateur. 
+//Enlevée car dégrade l'experience utilisateur (Fonction jamais appelée)
 function ville_depart() {
   const depart=prompt("De quelle ville venez vous ?");
   let dest=document.getElementById('destination');
@@ -121,14 +121,16 @@ var appliAPI = function(data) {
 }
 
 function appelAPI() {
+  //Boucle pour appeler la fonction à chaque ville.
   for (var i in destinations){
     ville = new Array(destinations[i].ville)
     var url = "https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric"
     
+    //utilisation de Jquery
     $.get(url, appliAPI).done(function() {
     })
     .always(function() {
-      //alert( "finished" );
+      
     });
 
    
@@ -137,7 +139,7 @@ function appelAPI() {
 }
 
 //Calcul du prix du voyage
-function calcul(nb_adulte,nb_enfant,depart,retour,prix){
+function calcul(nb_adulte,nb_enfant,depart,retour,prix,dej){
   
   //duree du voyage
   d=depart.getDate()
@@ -146,17 +148,21 @@ function calcul(nb_adulte,nb_enfant,depart,retour,prix){
 
   //calcul du prix
   prix= (nb_adulte*prix+nb_enfant*(prix*0.4))*duree;
+  console.log(dej)
+  if (dej[0].checked){
+    prix=prix+ (12*(nb_adulte+nb_enfant))*duree
+  }
   return prix
 }
 
-//Affichage du prix du voyage dans el formulaire de reservation
+//Affichage du prix du voyage dans le formulaire de reservation
  function change() {
   //on récupère les elements du formulaire
   const nb_adulte = document.getElementById('adults').value;
   const nb_enfant = document.getElementById('kids').value;
   const depart =document.getElementById('departure').valueAsDate
   const retour =document.getElementById('return').valueAsDate  
-
+  const dej= document.getElementsByName('dej');
   un = new window.URLSearchParams(window.location.search)
   
   const ville2 = un.get("destination");
@@ -174,7 +180,7 @@ function calcul(nb_adulte,nb_enfant,depart,retour,prix){
     retour.innerHTML = ""
   }
   //on récupère le résultat du calcul
-  price= calcul(nb_adulte,nb_enfant,depart,retour,prix)
+  price= calcul(nb_adulte,nb_enfant,depart,retour,prix,dej)
 
 //on affiche le prix
   let aff_prix = document.getElementById('prix');
