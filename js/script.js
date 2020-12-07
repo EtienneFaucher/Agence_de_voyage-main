@@ -148,10 +148,13 @@ function calcul(nb_adulte,nb_enfant,depart,retour,prix,dej){
 
   //calcul du prix
   prix= (nb_adulte*prix+nb_enfant*(prix*0.4))*duree;
-  console.log(dej)
-  if (dej[0].checked){
+
+  var dej = document.getElementsByName('user_breakfast')
+  
+  if(dej[0].checked){
     prix=prix+ (12*(nb_adulte+nb_enfant))*duree
   }
+
   return prix
 }
 
